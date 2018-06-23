@@ -1,0 +1,39 @@
+/* reset */
+body,ul,li,h1,h2,h3,h4,h5,h6,p{ margin:0; padding:0;}
+body{ overflow-x:hidden; }
+ul,li { list-style:none; }
+a{ text-decoration:none; color:inherit; }
+/* 전체 영역 */
+#wrap{ width:100%; }
+/* 헤더 영역 */
+#header{ width:100%; height:230px; border-bottom:1px solid #b7b7b7; }
+/* 헤더 상단 메뉴얼 */
+.h_menu{ width:100%; height:50px; position:relative; border-bottom:1px solid #b7b7b7; min-width:500px; }
+.h_menu_sub { width:300px; position:absolute; right:5px; }
+.h_menu_sub li { float:left; }
+.h_menu_sub li a { font-family: 'Source Sans Pro', sans-serif; font-size:0.9rem; font-weight:700; margin-left:10px; color:#989797; line-height:50px; }
+.h_menu_sub li a:hover{ color:#464646; }
+.h_menu_sub li a img { margin-top:12px; }
+.h_menu_sub .bar { width:1px; background-color:#b7b7b7 ; height:19px; margin:15px 5px 0 15px; }
+/* 헤더 제목 */
+#header h1 { font-size:5rem; letter-spacing:10px; font-family: 'Source Sans Pro', sans-serif; text-align:center; color:#383838; margin-top:20px; }
+#header h5 { text-align:center; font-family:'Source Sans Pro', sans-serif; }
+/* 메인 영역 */
+#main { width:90%; height:1200px; background-color:beige; margin:0 auto; margin-top:30px; min-width:1300px;}
+/* 메인 메뉴얼 */
+#nav { width:250px; height:100%; border-right:1px solid black; float:left; margin-right:30px; }
+/* 유저 영역 */
+.user { width:250px; height:250px; border:1px solid black; }
+/* 섹션 영역 */
+#section { width:60%; height:100%; background-color:powderblue; float:left; }
+/* 푸터 영역 */
+#footer { width:100%; height:230px; background-color:palevioletred; }
+
+
+
+
+
+
+
+
+
