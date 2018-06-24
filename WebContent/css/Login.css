@@ -1,0 +1,52 @@
+/* reset */
+body,ul,li,h1,h2,h3,h4,h5,h6,p{ margin:0; padding:0;}
+body{ overflow-x:hidden; }
+ul,li { list-style:none; }
+a{ text-decoration:none; color:inherit; }
+/* 전체 영역 */
+#wrap{ width:100%; }
+/* 헤더 영역 */
+#header{ width:100%; height:230px; border-bottom:1px solid #b7b7b7; }
+/* 헤더 상단 메뉴얼 */
+.h_menu{ width:100%; height:50px; position:relative; border-bottom:1px solid #b7b7b7; min-width:500px; }
+.h_menu_sub { width:300px; position:absolute; right:5px; }
+.h_menu_sub li { float:left; }
+.h_menu_sub li a { font-family: 'Source Sans Pro', sans-serif; font-size:0.9rem; font-weight:700; margin-left:10px; color:#989797; line-height:50px; }
+.h_menu_sub li a:hover{ color:#464646; }
+.h_menu_sub li a img { margin-top:12px; }
+.h_menu_sub .bar { width:1px; background-color:#b7b7b7; height:19px; margin:15px 5px 0 15px; }
+/* 헤더 제목 */
+#header h1 { font-size:5rem; letter-spacing:10px; font-family: 'Source Sans Pro', sans-serif; text-align:center; color:#383838; margin-top:20px; }
+#header h5 { text-align:center; font-family:'Source Sans Pro', sans-serif; }
+/* 로그인 화면 */
+#login{ width:400px; height:300px; border:2px solid black; margin:0 auto; margin-top:50px; font-size:1.5rem; font-family: 'Song Myung', serif; font-weight:700; position:relative; }
+/* 로그인 화면 텍스트 */
+#login span{ margin-top:10px; display:inline-block; }
+/* 로그인 화면 아이디 , 패스워드 */
+#login .login_id { letter-spacing:5px; margin-bottom:30px;}
+#login .login_id input { margin-left:6px; }
+.login_id_pwd{ width:350px; height:150px; margin:0 auto; margin-top:30px; padding-left:50px; }
+/* 로그인 id화면 */
+.login_id { width:300px; height:50px; position:relative; }
+/* 로그인 pwd화면 */
+.login_pwd { width:300px; height:50px; position:relative;  }
+/* 로그인 화면 인풋박스 */
+#login input { width:170px; height:20px; border:1.5px solid black; margin-left:10px; position:absolute; bottom:23%; padding-left:5px; }
+/* 로그인 버튼 */
+#login input[type="submit"] { width:70px; height:30px; background-color:antiquewhite;position:absolute; left:38%; bottom:30%; font-family: 'Song Myung', serif; font-weight:700; cursor:pointer;}
+/* 로그인 메뉴얼 */
+#login_menu { font-size:0.9rem; font-weight:700; width:300px; height:20px; margin:0 auto; margin-top:60px; }
+#login_menu ul li { float:left; margin-left:30px; line-height:15px; }
+#login_menu ul li:hover { border-bottom:1px solid black; }
+/* 푸터 영역 */
+#footer { width:100%; height:230px; background-color:palevioletred; margin-top:70px; } 
+
+
+
+
+
+
+
+
+
+

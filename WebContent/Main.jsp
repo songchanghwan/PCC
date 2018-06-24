@@ -1,48 +1,50 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
         <title>PCC</title>
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/Main.css">
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     </head>
     <body>
-        <!-- ì „ì²´ ì˜ì—­ -->
+        <!-- ÀüÃ¼ ¿µ¿ª -->
         <div id="wrap">
-        <!-- í—¤ë” ë¶€ë¶„ -->
+        <!-- Çì´õ ºÎºÐ -->
             <div id="header">
-                    <!-- í—¤ë” ìƒë‹¨ ë©”ë‰´ì–¼ -->
+                    <!-- Çì´õ »ó´Ü ¸Þ´º¾ó -->
                     <div class="h_menu">
                         <ul class="h_menu_sub">
                             <li><a href="#">Login</a></li>
-                            <li><a href="#">Join</a></li>
+                            <li><a href="#">Sign Up</a></li>
                             <li class="bar"></li>
-                            <li><a href="#"><img src="images/icon_kakao.png" alt="PPC ì¹´ì¹´ì˜¤í†¡ ì•„ì´ì½˜" title="PPC ì¹´ì¹´ì˜¤í†¡"></a></li>
-                            <li><a href="#"><img src="images/icon_facebook.png" alt="PPC íŽ˜ì´ìŠ¤ë¶ ì•„ì´ì½˜" title="PPC íŽ˜ì´ìŠ¤ë¶"></a></li>
-                            <li><a href="#"><img src="images/icon_instar.png" alt="PPC ì¸ìŠ¤íƒ€ê·¸ëž¨ ì•„ì´ì½˜" title="PPC ì¸ìŠ¤íƒ€ê·¸ëž¨"></a></li>
-                            <li><a href="#"><img src="images/icon_cafe.png" alt="PPC ë„¤ì´ë²„ì¹´íŽ˜ ì•„ì´ì½˜" title="PPC ë„¤ì´ë²„ì¹´íŽ˜"></a></li>
+                            <li><a href="#"><img src="images/icon_kakao.png" alt="PPC Ä«Ä«¿ÀÅå ¾ÆÀÌÄÜ" title="PPC Ä«Ä«¿ÀÅå"></a></li>
+                            <li><a href="#"><img src="images/icon_facebook.png" alt="PPC ÆäÀÌ½ººÏ ¾ÆÀÌÄÜ" title="PPC ÆäÀÌ½ººÏ"></a></li>
+                            <li><a href="#"><img src="images/icon_instar.png" alt="PPC ÀÎ½ºÅ¸±×·¥ ¾ÆÀÌÄÜ" title="PPC ÀÎ½ºÅ¸±×·¥"></a></li>
+                            <li><a href="#"><img src="images/icon_cafe.png" alt="PPC ³×ÀÌ¹öÄ«Æä ¾ÆÀÌÄÜ" title="PPC ³×ÀÌ¹öÄ«Æä"></a></li>
                         </ul>
                     </div>
-                    <!-- í—¤ë” ì œëª© -->
+                    <!-- Çì´õ Á¦¸ñ -->
                     <h1>PCC</h1>
                     <h5>programmer community center</h5>
             </div>
-            <!-- ë©”ì¸ ì˜ì—­ -->
+            <!-- ¸ÞÀÎ ¿µ¿ª -->
             <div id="main">
-                <!-- ë©”ì¸ ë©”ë‰´ì–¼ -->
+                <!-- ¸ÞÀÎ ¸Þ´º¾ó -->
                 <div id="nav">
                     <div class="user">
                         
                     </div>
                 </div>
-                <!-- ì„¹ì…˜(ì¤‘ê°„) ì˜ì—­ -->
+                <!-- ¼½¼Ç(Áß°£) ¿µ¿ª -->
                 <div id="section">
                     <div class="article">
                         
                     </div>
                 </div>
             </div>
-            <!-- í‘¸í„°(ë) ì˜ì—­ -->
+            <!-- ÇªÅÍ(³¡) ¿µ¿ª -->
             <div id="footer">
             
             </div>
