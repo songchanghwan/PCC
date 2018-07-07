@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data-sources>
+	<data-source id="mariaDB-16475472681-541371048711e5f4" provider="mysql" driver="mariaDB" name="MariaDB - pcc" save-password="true" show-system-objects="true" read-only="false">
+		<connection host="pcc.cxgpwk1cordh.ap-northeast-2.rds.amazonaws.com" port="3308" server="" database="pcc" url="jdbc:mysql://pcc.cxgpwk1cordh.ap-northeast-2.rds.amazonaws.com:3308/pcc" user="pccuser" password="Q1RWcCGi" type="dev">
+			<network-handler type="TUNNEL" id="ssh_tunnel" enabled="false" save-password="false">
+				<property name="sshConnectTimeout" value="10000"/>
+				<property name="port" value="22"/>
+				<property name="implementation" value="jsch"/>
+				<property name="authType" value="PASSWORD"/>
+			</network-handler>
+			<network-handler type="PROXY" id="socks_proxy" enabled="false" save-password="false">
+				<property name="socks-port" value="1080"/>
+			</network-handler>
+			<network-handler type="CONFIG" id="mysql_ssl" enabled="false" save-password="false">
+				<property name="ssl.public.key.retrieve" value="false"/>
+				<property name="ssl.verify.server" value="true"/>
+				<property name="ssl.require" value="false"/>
+			</network-handler>
+		</connection>
+	</data-source>
+	<filters/>
+</data-sources>

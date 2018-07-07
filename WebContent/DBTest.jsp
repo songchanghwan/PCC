@@ -1,5 +1,7 @@
-<%@page import="kr.pcc.JdbcUtil"%>
-<%@page import="java.sql.Connection"%>
+<%@page import="java.util.List"%>
+<%@page import="kr.korea.pcc.vo.GuestVO"%>
+<%@page import="kr.korea.pcc.MybatisUtil"%>
+<%@page import="org.apache.ibatis.session.SqlSession"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -9,16 +11,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-
 <%
-	Connection conn = null;
-	conn = JdbcUtil.getConnection();
-	
-	out.println("연결성공1" + conn + "<br>");
-	
-	JdbcUtil.close(conn); // 반환
+		SqlSession sqlSession = MybatisUtil.getSqlSessionFactory().openSession();
+			
+		GuestVO vo = sqlSession.selectOne("test.selectByIdx", 2); // 형변환할 필요가 없다.
+		
+		out.println(vo.toString() +"<br>");
+		
 
 %>
-
 </body>
 </html>
