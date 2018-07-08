@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    /* 슬라이드 메뉴 기능 */
     $(".m_menu>span").click(function(){
         var submenu = $(this).next("ul");
         if(submenu.is(":visible")){
@@ -7,6 +8,7 @@ $(document).ready(function(){
             submenu.slideDown();
         }
     });   
+        /* 히스토리 기능 */
         $(document).on('click','#nav a','.hide a',function(e){
         history.pushState(null, null, e.target.href);
         $('#section').load(e.target.href + ' #section>.article');
@@ -15,5 +17,11 @@ $(document).ready(function(){
     $(window).on('popstate', function(e){
         $('#section').load(location.href + ' #section>.article');
     })
+        /* 스크롤탑 기능 */
+        var scrollTop = $('#nav a');
+        var delay = 500;
+        scrollTop.on('click', function(){
+          $('html').animate({ scrollTop: 0 }, delay);
+        });
 });
 

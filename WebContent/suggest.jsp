@@ -98,7 +98,10 @@
                 <!-- 섹션(중간) 영역 -->
                 <div id="section">
                     <div class="article">
-
+                       <style>
+                            .article { width:90%; height:70%; border:3px solid black; margin:0 auto; margin-top:50px; }
+                       </style>
+                        	건의사항 입니다.
                     </div>
                 </div>
             </div>

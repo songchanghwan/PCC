@@ -1,44 +1,44 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="utf-8"%>
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
         <title>PCC</title>
-        <link rel="stylesheet" href="css/Main.css">
+        <link rel="stylesheet" href="Main.css">
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Abril+Fatface|Poor+Story" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     </head>
     <body>
-        <!-- ì „ì²´ ì˜ì—­ -->
+        <!-- ÀüÃ¼ ¿µ¿ª -->
         <div id="wrap">
-        <!-- í—¤ë” ë¶€ë¶„ -->
+        <!-- Çì´õ ºÎºÐ -->
             <div id="header">
-                    <!-- í—¤ë” ìƒë‹¨ ë©”ë‰´ì–¼ -->
+                    <!-- Çì´õ »ó´Ü ¸Þ´º¾ó -->
                     <div class="h_menu">
                         <ul class="h_menu_sub">
                             <li><a href="Login.jsp" target="_blank">Login</a></li>
                             <li><a href="Join.jsp" target="_blank">Join</a></li>
                             <li class="bar"></li>
-                            <li><a href="#"><img src="M_images/icon_kakao.png" alt="PPC ì¹´ì¹´ì˜¤í†¡ ì•„ì´ì½˜" title="PPC ì¹´ì¹´ì˜¤í†¡"></a></li>
-                            <li><a href="#"><img src="M_images/icon_facebook.png" alt="PPC íŽ˜ì´ìŠ¤ë¶ ì•„ì´ì½˜" title="PPC íŽ˜ì´ìŠ¤ë¶"></a></li>
-                            <li><a href="#"><img src="M_images/icon_instar.png" alt="PPC ì¸ìŠ¤íƒ€ê·¸ëž¨ ì•„ì´ì½˜" title="PPC ì¸ìŠ¤íƒ€ê·¸ëž¨"></a></li>
-                            <li><a href="#"><img src="M_images/icon_cafe.png" alt="PPC ë„¤ì´ë²„ì¹´íŽ˜ ì•„ì´ì½˜" title="PPC ë„¤ì´ë²„ì¹´íŽ˜"></a></li>
+                            <li><a href="#"><img src="M_images/icon_kakao.png" alt="PPC Ä«Ä«¿ÀÅå ¾ÆÀÌÄÜ" title="PPC Ä«Ä«¿ÀÅå"></a></li>
+                            <li><a href="#"><img src="M_images/icon_facebook.png" alt="PPC ÆäÀÌ½ººÏ ¾ÆÀÌÄÜ" title="PPC ÆäÀÌ½ººÏ"></a></li>
+                            <li><a href="#"><img src="M_images/icon_instar.png" alt="PPC ÀÎ½ºÅ¸±×·¥ ¾ÆÀÌÄÜ" title="PPC ÀÎ½ºÅ¸±×·¥"></a></li>
+                            <li><a href="#"><img src="M_images/icon_cafe.png" alt="PPC ³×ÀÌ¹öÄ«Æä ¾ÆÀÌÄÜ" title="PPC ³×ÀÌ¹öÄ«Æä"></a></li>
                         </ul>
                     </div>
-                    <!-- í—¤ë” ì œëª© -->
+                    <!-- Çì´õ Á¦¸ñ -->
                     <h1><a href="Main.jsp">PCC</a></h1>
                     <h5>programmer community center</h5>
             </div>
-            <!-- ë©”ì¸ ì˜ì—­ -->
+            <!-- ¸ÞÀÎ ¿µ¿ª -->
             <div id="main">
-                <!-- ë©”ì¸ ë©”ë‰´ì–¼ -->
+                <!-- ¸ÞÀÎ ¸Þ´º¾ó -->
                 <div id="nav">
                     <div class="user">
                         
                     </div>
-                    <!-- ë©”ì¸ ë©”ë‰´ ìž‘ì—… -1 -->
-                    <a href="Notice.jsp">â˜…ê³µì§€ì‚¬í•­â˜…</a>
+                    <!-- ¸ÞÀÎ ¸Þ´º ÀÛ¾÷ -1 -->
+                    <a href="Notice.jsp">¡Ú°øÁö»çÇ×¡Ú</a>
                     <div id="q_a_box">
                     <ul>
                         <li class="m_menu">
@@ -55,7 +55,7 @@
                             <span>Language Q & A</span>
                             <ul class="hide">
                                 <li><a href="CC++.jsp">C/C++</a></li>
-                                <li><a href="C.jsp">C#</a></li>
+                                <li><a href="C¼¥.jsp">C#</a></li>
                                 <li><a href="JAVA.jsp">JAVA</a></li>
                                 <li><a href="Python.jsp">Python</a></li>
                             </ul>
@@ -72,43 +72,46 @@
                     </ul>
                     <ul>
                         <li class="m_menu">
-                            <span>ê¸°íƒ€ Q & A</span>
+                            <span>±âÅ¸ Q & A</span>
                             <ul class="hide">
-                                <li><a href="suggest.jsp">ê±´ì˜ì‚¬í•­</a></li>
+                                <li><a href="suggest.jsp">°ÇÀÇ»çÇ×</a></li>
                             </ul>
                         </li>
                     </ul>
                     </div>
-                    <!-- ì»¤ë®¤ë‹ˆí‹° ë©”ë‰´ì–¼ -->
+                    <!-- Ä¿¹Â´ÏÆ¼ ¸Þ´º¾ó -->
                     <div id="c_box">
                     <ul>
                         <li class="m_menu">
-                            <span>PCC ì‰¼í„°</span>
+                            <span>PCC ½°ÅÍ</span>
                             <ul class="hide">
-                                <li><a href="free.jsp">ìžìœ ê²Œì‹œíŒ</a></li>
-                                <li><a href="worry.jsp">ê³ ë¯¼ë‚˜ëˆ„ê¸°</a></li>
-                                <li><a href="humor.jsp">ìœ ë¨¸ê²Œì‹œíŒ</a></li>
-                                <li><a href="study.jsp">ê°œì¸ìŠ¤í„°ë”” ëª¨ì§‘</a></li>
-                                <li><a href="developer.jsp">ê°œë°œìž ëª¨ìž„</a></li>
+                                <li><a href="free.jsp">ÀÚÀ¯°Ô½ÃÆÇ</a></li>
+                                <li><a href="worry.jsp">°í¹Î³ª´©±â</a></li>
+                                <li><a href="humor.jsp">À¯¸Ó°Ô½ÃÆÇ</a></li>
+                                <li><a href="study.jsp">°³ÀÎ½ºÅÍµð ¸ðÁý</a></li>
+                                <li><a href="developer.jsp">°³¹ßÀÚ ¸ðÀÓ</a></li>
                             </ul>
                         </li>
                     </ul>
                     </div>
                 </div>
-                <!-- ì„¹ì…˜(ì¤‘ê°„) ì˜ì—­ -->
+                <!-- ¼½¼Ç(Áß°£) ¿µ¿ª -->
                 <div id="section">
                     <div class="article">
-
+                      <style>
+                        .article { width:90%; height:70%; border:3px solid #00007c; margin:0 auto; margin-top:50px; }
+                      </style>
+                        C#ÀÔ´Ï´Ù.
                     </div>
                 </div>
             </div>
-            <!-- í‘¸í„°(ë) ì˜ì—­ -->
+            <!-- ÇªÅÍ(³¡) ¿µ¿ª -->
             <div id="footer">
-                PCC(ì£¼) | ê²½ê¸°ë„ ë¶€ì²œì‹œ ì†Œì‚¬ë¡œ 78ë²ˆê¸¸ 70<br>
-               	ì‚¬ì—…ìžë“±ë¡ë²ˆí˜¸ : 000-00-00000 | ê°œì¸ì •ë³´ê´€ë¦¬ì±…ìž„ìž : ì„œê°•í˜<br>
-                                    ì „í™”ë²ˆí˜¸ : 032-345-5886 | ì´ë©”ì¼ : kanghyeok93@naver.com
-               <p>PCCëŠ” ê²Œì‹œë¬¼ì˜ ë¬´ë‹¨ ë„ìš©,ë³µì œ & 2ì°¨ ê°€ê³µ ë° ìƒì—…ì  ì´ìš©ì„ ê¸ˆì§€í•©ë‹ˆë‹¤.</p>
-               <p>copyrightâ“’2018 PCC. All rights reserved. </p>
+                PCC(ÁÖ) | °æ±âµµ ºÎÃµ½Ã ¼Ò»ç·Î 78¹ø±æ 70<br>
+               	»ç¾÷ÀÚµî·Ï¹øÈ£ : 000-00-00000 | °³ÀÎÁ¤º¸°ü¸®Ã¥ÀÓÀÚ : ¼­°­Çõ<br>
+               	ÀüÈ­¹øÈ£ : 032-345-5886 | ÀÌ¸ÞÀÏ : kanghyeok93@naver.com
+               <p>PCC´Â °Ô½Ã¹°ÀÇ ¹«´Ü µµ¿ë,º¹Á¦ & 2Â÷ °¡°ø ¹× »ó¾÷Àû ÀÌ¿ëÀ» ±ÝÁöÇÕ´Ï´Ù.</p>
+               <p>copyright¨Ï2018 PCC. All rights reserved. </p>
             </div>
         </div>
         <script src="js/Main.js"></script>
