@@ -1,6 +1,6 @@
 @charset "EUC-KR";
 /* reset */
-body,ul,li,h1,h2,h3,h4,h5,h6,p{ margin:0; padding:0;}
+body,ul,li,h1,h2,h3,h4,h5,h6,p{ margin:0; padding:0; }
 body{ overflow-x:hidden; }
 ul,li { list-style:none; }
 a{ text-decoration:none; color:inherit; }
@@ -11,7 +11,7 @@ body { font-family: 'Source Sans Pro',sans-serif; }
 #header{ width:100%; height:230px; border-bottom:1px solid #b7b7b7; }
 /* 헤더 상단 메뉴얼 */
 .h_menu{ width:100%; height:50px; position:relative; border-bottom:1px solid #b7b7b7; min-width:500px; }
-.h_menu_sub { width:300px; position:absolute; right:5px; }
+.h_menu_sub { width:300px; position:absolute; right:40px; }
 .h_menu_sub li { float:left; }
 .h_menu_sub li a { font-size:0.9rem; font-weight:700; margin-left:10px; color:#989797; line-height:50px; }
 .h_menu_sub li a:hover{ color:#464646; }
@@ -20,13 +20,22 @@ body { font-family: 'Source Sans Pro',sans-serif; }
 /* 헤더 제목 */
 #header h1 { font-size:5rem; letter-spacing:10px; text-align:center; color:#383838; margin-top:20px; }
 #header h5 { text-align:center; }
+/* 우측 바 */
+#rbar { width:45px; height:100%; border-left:1px solid #c8c8c8; position:fixed; font-size:2rem; top:0; right:0; text-align:center; writing-mode:tb-rl; background-color:#ffffff; letter-spacing:3px;}
+.rbar_txt { line-height:45px; width:40px; height:300px; animation:rbar_ani linear 5s infinite; font-weight:700; margin:auto; }
+@keyframes rbar_ani{
+    25%{ transform:translateY(-150px); }
+    50%{ transform:translateY(0px); color:transparent;}
+    75%{ transform:translateY(150px); }
+    100%{ transform:translateY(0px); }
+} 
 /* 회원가입 영역 */
-#Join { width:500px; border:3px solid peru; margin:0 auto; margin-top:50px; box-sizing:border-box; font-family:'Poor Story', cursive; font-weight:700; font-size:1.3rem; padding:30px;}
+#Join { width:500px; border:3px solid palevioletred; margin:0 auto; margin-top:50px; box-sizing:border-box; font-family:'Poor Story', cursive; font-weight:700; font-size:1.3rem; padding:30px; border-radius:15px;}
 #Join p > *{ font-family:'Poor Story', cursive; font-weight:700; font-size:1.3rem; width:150px; margin:10px 0 10px 0; }
 #Join span { display:inline-block; width:120px; text-align:center;}
 #Join .Join_ch { width:130px; margin-left:10px; }
 #Join .Join_btn { width:50%; margin:0 auto; margin-top:15px; overflow:hidden; }
-#Join .Join_btn input { font-family:'Poor Story', cursive; font-weight:700; font-size:1.3rem; border:none; background-color:transparent; cursor:pointer; float:left; width:70px; outline:none; border:2px solid palevioletred; border-radius:50%; height:55px; }
+#Join .Join_btn input { font-family:'Poor Story', cursive; font-weight:700; font-size:1.3rem; border:none; background-color:transparent; cursor:pointer; float:left; width:70px; outline:none; border:2px solid peru; border-radius:50%; height:55px; }
 #Join .Join_btn input:hover { color:tomato; }
 #Join .Join_btn input:nth-child(2) { float:right; }
 /* 푸터 영역 */

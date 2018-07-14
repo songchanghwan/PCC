@@ -30,6 +30,10 @@
                     <h1><a href="Main.jsp">PCC</a></h1>
                     <h5>programmer community center</h5>
             </div>
+            <!-- 우측 바 -->
+            <div id="rbar">
+                <div class="rbar_txt">Welcome To PCC</div>
+            </div>
             <!-- 회원가입 화면 -->
             <form action="" method="post">
                 <div id="Join">

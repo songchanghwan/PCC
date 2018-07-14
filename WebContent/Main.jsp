@@ -30,8 +30,17 @@
                     <h1><a href="Main.jsp">PCC</a></h1>
                     <h5>programmer community center</h5>
             </div>
+            <!-- 우측 바 -->
+            <div id="rbar">
+                <div class="rbar_txt">Welcome To PCC</div>
+            </div>
             <!-- 메인 영역 -->
             <div id="main">
+            	<!-- 광고 -->
+                <div id="aside">
+                    <div class="aside_1">AD1</div>
+                    <div class="aside_2">AD2</div>
+                </div>
                 <!-- 메인 메뉴얼 -->
                 <div id="nav">
                     <div class="user">
