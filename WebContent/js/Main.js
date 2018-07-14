@@ -14,7 +14,7 @@ $(".m_menu>span").on('click',function(){
     $(document).on('click','#nav a','.hide a',function(e){
     history.pushState(null, null, e.target.href);
     $('#section').load(e.target.href + ' #section>.article');
-    event.preventDefault();ㄴㄴㄴ
+    event.preventDefault();
 })
 $(window).on('popstate', function(e){
     $('#section').load(location.href + ' #section>.article');
