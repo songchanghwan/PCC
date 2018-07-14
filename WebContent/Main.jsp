@@ -36,7 +36,8 @@
             </div>
             <!-- 메인 영역 -->
             <div id="main">
-                <!-- 광고 -->
+
+            	<!-- 광고 -->
                 <div id="aside">
                     <div class="aside_1">AD1</div>
                     <div class="aside_2">AD2</div>
