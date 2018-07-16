@@ -1,15 +1,15 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="utf-8"%>
-<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>PCC</title>
-        <link rel="stylesheet" href="css/Main.css">
-        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Abril+Fatface|Poor+Story" rel="stylesheet">
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    </head>
-    <body>
+  <head>
+    <title>PCC Project : <sitemesh:write property='title'/></title>
+    <style type='text/css'>
+		
+    </style>
+    <sitemesh:write property='head'/>
+  </head>
+  <body>
         <!-- 전체 영역 -->
         <div id="wrap">
         <!-- 헤더 부분 -->
@@ -17,21 +17,32 @@
                     <!-- 헤더 상단 메뉴얼 -->
                     <div class="h_menu">
                         <ul class="h_menu_sub">
-                            <li><a href="Login.jsp" target="_blank">Login</a></li>
-                            <li><a href="Join.jsp" target="_blank">Join</a></li>
+                            <li><a href="../Login.jsp" target="_blank">Login</a></li>
+                            <li><a href="../Join.jsp" target="_blank">Join</a></li>
                             <li class="bar"></li>
-                            <li><a href="#"><img src="M_images/icon_kakao.png" alt="PPC 카카오톡 아이콘" title="PPC 카카오톡"></a></li>
-                            <li><a href="#"><img src="M_images/icon_facebook.png" alt="PPC 페이스북 아이콘" title="PPC 페이스북"></a></li>
-                            <li><a href="#"><img src="M_images/icon_instar.png" alt="PPC 인스타그램 아이콘" title="PPC 인스타그램"></a></li>
-                            <li><a href="#"><img src="M_images/icon_cafe.png" alt="PPC 네이버카페 아이콘" title="PPC 네이버카페"></a></li>
+                            <li><a href="#"><img src="../M_images/icon_kakao.png" alt="PPC 카카오톡 아이콘" title="PPC 카카오톡"></a></li>
+                            <li><a href="#"><img src="../M_images/icon_facebook.png" alt="PPC 페이스북 아이콘" title="PPC 페이스북"></a></li>
+                            <li><a href="#"><img src="../M_images/icon_instar.png" alt="PPC 인스타그램 아이콘" title="PPC 인스타그램"></a></li>
+                            <li><a href="#"><img src="../M_images/icon_cafe.png" alt="PPC 네이버카페 아이콘" title="PPC 네이버카페"></a></li>
                         </ul>
                     </div>
                     <!-- 헤더 제목 -->
                     <h1><a href="Main.jsp">PCC</a></h1>
                     <h5>programmer community center</h5>
             </div>
+            <!-- 우측 바 -->
+            <div id="rbar">
+                <div class="rbar_txt">Welcome To PCC</div>
+            </div>
+            
             <!-- 메인 영역 -->
             <div id="main">
+
+            	<!-- 광고 -->
+                <div id="aside">
+                    <div class="aside_1">AD1</div>
+                    <div class="aside_2">AD2</div>
+                </div>
                 <!-- 메인 메뉴얼 -->
                 <div id="nav">
                     <div class="user">
@@ -85,7 +96,7 @@
                         <li class="m_menu">
                             <span>PCC 쉼터</span>
                             <ul class="hide">
-                                <li><a href="free.jsp">자유게시판</a></li>
+                                <li><a href="free.jsp">자유게시판입니다.</a></li>
                                 <li><a href="worry.jsp">고민나누기</a></li>
                                 <li><a href="humor.jsp">유머게시판</a></li>
                                 <li><a href="study.jsp">개인스터디 모집</a></li>
@@ -95,15 +106,7 @@
                     </ul>
                     </div>
                 </div>
-                <!-- 섹션(중간) 영역 -->
-                <div id="section">
-                    <div class="article">
-                      <style>
-                        .article { width:90%; height:70%; border:3px solid chocolate; margin:0 auto; margin-top:50px; }
-                      </style>
-                        Node.js입니다.
-                    </div>
-                </div>
+				<sitemesh:write property='body'/>
             </div>
             <!-- 푸터(끝) 영역 -->
             <div id="footer">
@@ -114,6 +117,10 @@
                <p>copyrightⓒ2018 PCC. All rights reserved. </p>
             </div>
         </div>
-        <script src="js/Main.js"></script>
-    </body>
+            
+      
+            
+
+
+  </body>
 </html>
