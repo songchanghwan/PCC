@@ -6,6 +6,7 @@
 	<meta charset="utf-8" />
         <title>PCC</title>
         <link rel="stylesheet" href="css/Main_sub.css">
+        <link rel="stylesheet" href="css/board.css">
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Abril+Fatface|Poor+Story" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
@@ -28,7 +29,7 @@
                         </ul>
                     </div>
                     <!-- 헤더 제목 -->
-                    <h1><a href="Main.jsp">PCC</a></h1>
+                    <h1><a href="/PCC/Main.jsp">PCC</a></h1>
                     <h5>programmer community center</h5>
             </div>
             <!-- 우측 바 -->
@@ -50,7 +51,7 @@
                         
                     </div>
                     <!-- 메인 메뉴 작업 -1 -->
-                    <a href="Notice.jsp">★공지사항★</a>
+                    <a href="/PCC/pcc_board/Notice.jsp">★공지사항★</a>
                     <div id="q_a_box">
                     <ul>
                         <li class="m_menu">
