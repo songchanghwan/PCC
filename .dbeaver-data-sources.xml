@@ -17,6 +17,18 @@
 				<property name="ssl.require" value="false"/>
 			</network-handler>
 		</connection>
+		<virtual-meta-data>
+			<container name="model">
+				<container name="information_schema">
+					<entity name="SESSION_VARIABLES">
+						<constraint name="PRIMARY" type="VIRTUAL KEY">
+							<attribute name="VARIABLE_NAME"/>
+							<attribute name="VARIABLE_VALUE"/>
+						</constraint>
+					</entity>
+				</container>
+			</container>
+		</virtual-meta-data>
 	</data-source>
 	<filters/>
 </data-sources>

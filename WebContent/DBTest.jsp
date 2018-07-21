@@ -14,7 +14,7 @@
 <%
 		SqlSession sqlSession = MybatisUtil.getSqlSessionFactory().openSession();
 		
-		GuestVO vo = sqlSession.selectOne("test.selectByIdx", 2); // 형변환할 필요가 없다.
+		GuestVO vo = sqlSession.selectOne("Board.selectByIdx", 2); // 형변환할 필요가 없다.
 		
 		out.println(vo.toString() +"<br>");
 %>
