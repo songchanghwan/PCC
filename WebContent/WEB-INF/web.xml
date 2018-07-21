@@ -10,7 +10,7 @@
 
   <filter-mapping>
     <filter-name>sitemesh</filter-name>
-    <url-pattern>/*</url-pattern>
+    <url-pattern>/pcc_board/*</url-pattern>
   </filter-mapping>
   
   <welcome-file-list>
