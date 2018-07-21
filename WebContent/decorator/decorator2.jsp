@@ -4,9 +4,6 @@
 <html>
   <head>
     <title>PCC Project : <sitemesh:write property='title'/></title>
-    <style type='text/css'>
-		
-    </style>
     <sitemesh:write property='head'/>
   </head>
   <body>
@@ -118,9 +115,5 @@
             </div>
         </div>
             
-      
-            
-
-
   </body>
 </html>
