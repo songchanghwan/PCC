@@ -26,4 +26,3 @@ $(window).on('popstate', function(e){
       $('html').animate({ scrollTop: 0 }, delay);
     });
 });
-
