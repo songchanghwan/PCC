@@ -27,7 +27,7 @@
                         </ul>
                     </div>
                     <!-- 헤더 제목 -->
-                    <h1><a href="Main.jsp">PCC</a></h1>
+                    <h1><a href="pcc_board/Main.jsp">PCC</a></h1>
                     <h5>programmer community center</h5>
             </div>
             <!-- 우측 바 -->
