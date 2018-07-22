@@ -4,25 +4,28 @@
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="Board">
-	
-	<select id="selectByIdx" resultType="guestVO" parameterType="int">
-		<![CDATA[
-			select * from guest where idx=#{idx}
-		]]>
-	</select>
-	
-	
+
 	<!-- 01. 전체 갯수 얻기        -->
-	<select id="getCount" resultSets="int">
+	<select id="getCount" resultType="int" >
 		<![CDATA[
 	 		select count(*) from board
 	 	]]>
 	</select>
 	
-	
-	
-	
-	
+	<!-- 02. 1개 얻기 -->
+
+	<select resultType="BoardVO" id="selectByIdx" parameterType="int">
+		<![CDATA[
+			select * from board	where idx=#{idx}	
+		]]>
+	</select>
+
+	<!-- 3. 1페이지 얻기 -->
+	<select resultType="BoardVO" id="selectList" parameterType="hashMap">
+		<![CDATA[
+				select * from board ORDER BY idx DESC LIMIT #{startNo},#{endNo}
+			]]>
+	</select>
 	
 	
 	
