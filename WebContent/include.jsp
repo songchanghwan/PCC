@@ -13,7 +13,7 @@
 	}
 	
 	// 페이지당 글수
-	int pageSize = 4;
+	int pageSize = 5;
 	try {
 		pageSize = Integer.parseInt(request.getParameter("s"));
 	}catch(Exception e) {

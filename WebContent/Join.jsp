@@ -35,13 +35,13 @@
                 <div class="rbar_txt">Welcome To PCC</div>
             </div>
             <!-- 회원가입 화면 -->
-            <form action="" method="post">
+            <form action="joinOk.jsp" method="post">
                 <div id="Join">
-                    <p><span>아이디</span><input type="id"><input type="button" class="Join_ch" value="아이디확인"></p>
-                    <p><span>닉네임</span><input type="id"><input type="button" class="Join_ch" value="닉네임확인"></p>
-                    <p><span>비밀번호</span><input type="password"></p>
-                    <p><span>비밀번호확인</span><input type="password"></p>
-                    <p><span>이메일</span><input type="email"></p>
+                    <p><span>아이디</span><input type="text" name = "id"><input type="button" class="Join_ch" value="아이디확인"></p>
+                    <p><span>닉네임</span><input type="text" name = "nicname"><input type="button" class="Join_ch" value="닉네임확인"></p>
+                    <p><span>비밀번호</span><input type="password" name ="password"></p>
+                    <p><span>비밀번호확인</span><input type="password" name ="re_password"></p>
+                    <p><span>이메일</span><input type="email" name = "email"></p>
                     <div class="Join_btn">
                         <input type="submit" value="가입">
                         <input type="reset" value="취소">
