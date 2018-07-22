@@ -36,8 +36,8 @@ public class pagingVo<T> {
 				// 전체페이지수 = (전체 개수-1)/페이지당글 수
 				totalPage = (totalCount - 1) / pageSize + 1;
 				// 시작번호 = (현재페이지-1)*페이지 사이즈 + 1 // 마리아는 index가 0부터 시작되므로 +1을 하지 않는다.
-				startNo = (currentPage - 1) * pageSize + 1;
-				endNo = startNo + pageSize - 1;
+				startNo = (currentPage - 1) * pageSize;
+				endNo = startNo + pageSize;
 				// 유효성검사 : 마지막번호가 전체 개수보다 클 수 없다.
 				if (endNo > totalCount)	endNo = totalCount;
 				// 시작페이지 = (현재페이지-1)/블록당페이지수 * 블록당페이지수 + 1

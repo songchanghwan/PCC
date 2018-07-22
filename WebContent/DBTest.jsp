@@ -1,4 +1,4 @@
-<%@page import="kr.korea.pcc.vo.GuestVO"%>
+<%@page import="kr.korea.pcc.vo.BoardVO"%>
 <%@page import="kr.korea.pcc.MybatisUtil"%>
 <%@page import="java.util.List"%>
 <%@page import="org.apache.ibatis.session.SqlSession"%>
@@ -14,7 +14,7 @@
 <%
 		SqlSession sqlSession = MybatisUtil.getSqlSessionFactory().openSession();
 		
-		GuestVO vo = sqlSession.selectOne("Board.selectByIdx", 2); // 형변환할 필요가 없다.
+		BoardVO vo = sqlSession.selectOne("Board.selectByIdx", 2); // 형변환할 필요가 없다.
 		
 		out.println(vo.toString() +"<br>");
 %>

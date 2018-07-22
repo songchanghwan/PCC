@@ -17,3 +17,12 @@ show variables like 'c%';
 SHOW CREATE TABLE board;
 
 ALTER TABLE board CONVERT TO character SET utf8;
+
+select * from board ORDER BY idx DESC LIMIT 0,5
+
+select * from board ORDER BY idx DESC LIMIT 5,5 
+
+select * from board ORDER BY idx DESC LIMIT 5 OFFSET 0 
+
+select * from board ORDER BY idx DESC LIMIT 5 OFFSET 5
+

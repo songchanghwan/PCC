@@ -13,7 +13,7 @@
 	}
 	
 	// 페이지당 글수
-	int pageSize = 5;
+	int pageSize = 4;
 	try {
 		pageSize = Integer.parseInt(request.getParameter("s"));
 	}catch(Exception e) {
@@ -37,18 +37,18 @@
 	}
 	
 	// 조회수 증가여부(0은 조회수 증가, 1은 조회수 증가 안함)
-	int mode = 0;
-	try {
-		mode = Integer.parseInt(request.getParameter("mode"));
-	}catch(Exception e) {
-		;
-	}
+// 	int mode = 0;
+// 	try {
+// 		mode = Integer.parseInt(request.getParameter("mode"));
+// 	}catch(Exception e) {
+// 		;
+// 	}
 	
 	request.setAttribute("currentPage", currentPage);
 	request.setAttribute("pageSize", pageSize);
 	request.setAttribute("blockSize", blockSize);
 	request.setAttribute("idx", idx);
-	request.setAttribute("mode", mode);
+//	request.setAttribute("mode", mode);
 	
 	//EL로 사용하기 위해서 request 영역에 저장한다.
 	

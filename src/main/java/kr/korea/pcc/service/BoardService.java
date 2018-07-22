@@ -27,18 +27,21 @@ public class BoardService {
 	
 	// 1. 목록 보기 - list
 	public pagingVo<BoardVO> selectList(int currentPage,int pageSize,int blockSize){
-//		Logger.debug("FreeBoardService selectList 호출됨");
+		logger.debug("BoardService selectList 호출됨");
 		pagingVo<BoardVO> paging = null;
-		BoardDAO freeBoardDAO = BoardDAO.getInstance();
+		BoardDAO boardDAO = BoardDAO.getInstance();
 		SqlSession sqlSession = null;
 		try {
 			sqlSession = MybatisUtil.getSqlSessionFactory().openSession();
-			logger.debug("FreeBoardService selectList 세션 : " + sqlSession.toString());
+			logger.debug("BoardService selectList 세션 : " + sqlSession.toString());
 			//===========================================================
-			int totalCount = freeBoardDAO.getCount(sqlSession); // 전체 개수
+			
+			int totalCount = boardDAO.getCount(sqlSession); // 전체 개수
 			paging = new pagingVo<>(totalCount, currentPage, pageSize, blockSize); // 페이지 계산
-			// 글목록
-			List<BoardVO> list = BoardDAO.selectList(sqlSession, paging.getStartNo(), paging.getEndNo());
+			List<BoardVO> list = boardDAO.selectList(sqlSession, paging.getStartNo(), paging.getPageSize());
+			logger.debug("List<BoardVO> list: " + paging.getList() );
+			paging.setList(list);
+			logger.debug("paging.setList(list): " + paging.getList() );
 			//===========================================================
 			sqlSession.commit();
 		}catch(Exception e) {
@@ -47,7 +50,7 @@ public class BoardService {
 		}finally {
 			if(sqlSession!=null) sqlSession.close();
 		}
-		logger.debug("FreeBoardService selectList 호출종료 : " + paging );
+		logger.debug("BoardService selectList 호출종료 : " + paging );
 		return paging;
 	}
 	

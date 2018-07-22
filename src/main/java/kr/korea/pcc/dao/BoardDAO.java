@@ -24,11 +24,16 @@ public class BoardDAO {
 		return sqlSession.selectOne("Board.getCount");
 	}
 	
+	// 2. 1개 얻기
+	public BoardVO selectByIdx(SqlSession sqlSession, int idx) {
+		return sqlSession.selectOne("Board.selectByIdx", idx);
+	}
+	
 	// 3. 1페이지 얻기
 	public List<BoardVO> selectList(SqlSession sqlSession, int startNo,int endNo) {
-		HashMap<String, String> map = new HashMap<>();
-		map.put("startNo", startNo+"");
-		map.put("endNo", endNo+"");
+		HashMap<String, Integer> map = new HashMap<>();
+		map.put("startNo", startNo);
+		map.put("endNo", endNo);
 		return sqlSession.selectList("Board.selectList", map);
 	}
 }

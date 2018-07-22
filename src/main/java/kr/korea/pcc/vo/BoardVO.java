@@ -10,6 +10,7 @@ public class BoardVO {
 	private Date regdate;
 	private int count;
 	private int hit;
+	
 	public int getIdx() {
 		return idx;
 	}
