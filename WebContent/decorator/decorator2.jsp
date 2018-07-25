@@ -46,7 +46,7 @@
                         
                     </div>
                     <!-- 메인 메뉴 작업 -1 -->
-                    <a href="Notice.jsp">★공지사항★</a>
+                    <a href="Notice.jsp"><i class="fas fa-bullhorn"></i> 공지사항</a>
                     <div id="q_a_box">
                     <ul>
                         <li class="m_menu">

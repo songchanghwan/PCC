@@ -28,7 +28,7 @@
                    			 #card_wrap .card:nth-child(2) { border-left:2px solid white; border-right:2px solid white; box-sizing:border-box; }
                    			 .card { float:left; width:33.33%; }                  			 
                    			 .card i{ font-size:3rem; margin-bottom:15px;  }
-                   			 .main_text_bottom { font-size:1.3rem; font-family:'Poor Story', cursive; font-weight:700; width:80%; margin:0 auto;  }
+                   			 .main_text_bottom { font-size:1.3rem; font-family:'Poor Story', cursive; font-weight:700; width:80%; margin:0 auto; margin-top:30px;   }
                    			 .main_text_bottom p { padding:10px 0;}
                    		</style>
                    			<div class="main_text_header">
@@ -42,14 +42,17 @@
 	                   				 <div class="card">
 	                   				 	<i class="fas fa-user-tie"></i>
 	                   				 	<h3>Seo Kang Hyeok</h3>
+	                   				 	<h4>Front-End</h4>
 	                   				 </div>
 	                   				 <div class="card">
 	                   				 	<i class="fas fa-user-tie"></i>
 	                   				 	<h3>Song Chang Hwan</h3>
+	                   				 	<h4>Back-End</h4>
 	                   				 </div>
 	                   				 <div class="card">
 	                   				 	<i class="fas fa-user-tie"></i>
 	                   				 	<h3>Jeong Yeong Bog</h3>
+	                   				 	<h4>Server</h4>
 	                   				 </div>
                    				 </div>
                    			</div>
