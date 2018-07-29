@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,58 +10,58 @@
     <link href="https://fonts.googleapis.com/css?family=Poor+Story|Source+Sans+Pro" rel="stylesheet">
     </head>
     <body>
-        <!-- ÀüÃ¼ ¿µ¿ª -->
+        <!-- ì „ì²´ ì˜ì—­ -->
         <div id="wrap">
-        <!-- Çì´õ ºÎºÐ -->
+        <!-- í—¤ë” ë¶€ë¶„ -->
             <div id="header">
-                    <!-- Çì´õ »ó´Ü ¸Þ´º¾ó -->
+                    <!-- í—¤ë” ìƒë‹¨ ë©”ë‰´ì–¼ -->
                     <div class="h_menu">
                         <ul class="h_menu_sub">
                             <li><a href="Login.jsp">Login</a></li>
                             <li><a href="Join.jsp" target="_blank">Join</a></li>
                             <li class="bar"></li>
-                            <li><a href="#"><img src="L_images/icon_kakao.png" alt="PPC Ä«Ä«¿ÀÅå ¾ÆÀÌÄÜ" title="PPC Ä«Ä«¿ÀÅå"></a></li>
-                            <li><a href="#"><img src="L_images/icon_facebook.png" alt="PPC ÆäÀÌ½ººÏ ¾ÆÀÌÄÜ" title="PPC ÆäÀÌ½ººÏ"></a></li>
-                            <li><a href="#"><img src="L_images/icon_instar.png" alt="PPC ÀÎ½ºÅ¸±×·¥ ¾ÆÀÌÄÜ" title="PPC ÀÎ½ºÅ¸±×·¥"></a></li>
-                            <li><a href="#"><img src="L_images/icon_cafe.png" alt="PPC ³×ÀÌ¹öÄ«Æä ¾ÆÀÌÄÜ" title="PPC ³×ÀÌ¹öÄ«Æä"></a></li>
+                            <li><a href="#"><img src="L_images/icon_kakao.png" alt="PPC ì¹´ì¹´ì˜¤í†¡ ì•„ì´ì½˜" title="PPC ì¹´ì¹´ì˜¤í†¡"></a></li>
+                            <li><a href="#"><img src="L_images/icon_facebook.png" alt="PPC íŽ˜ì´ìŠ¤ë¶ ì•„ì´ì½˜" title="PPC íŽ˜ì´ìŠ¤ë¶"></a></li>
+                            <li><a href="#"><img src="L_images/icon_instar.png" alt="PPC ì¸ìŠ¤íƒ€ê·¸ëž¨ ì•„ì´ì½˜" title="PPC ì¸ìŠ¤íƒ€ê·¸ëž¨"></a></li>
+                            <li><a href="#"><img src="L_images/icon_cafe.png" alt="PPC ë„¤ì´ë²„ì¹´íŽ˜ ì•„ì´ì½˜" title="PPC ë„¤ì´ë²„ì¹´íŽ˜"></a></li>
                         </ul>
                     </div>
-                    <!-- Çì´õ Á¦¸ñ -->
+                    <!-- í—¤ë” ì œëª© -->
                     <h1><a href="pcc_board/Main.jsp">PCC</a></h1>
                     <h5>programmer community center</h5>
             </div>
-            <!-- ¿ìÃø ¹Ù -->
+            <!-- ìš°ì¸¡ ë°” -->
             <div id="rbar">
                 <div class="rbar_txt">Welcome To PCC</div>
             </div>
-            <!-- ·Î±×ÀÎ È­¸é -->
-            <form action="" method="post">
+            <!-- ë¡œê·¸ì¸ í™”ë©´ -->
+            <form action="LoginOk.jsp" method="post">
                 <div id="login">
                     <div class="login_container">
                         <i class="fas fa-user"></i>
-                        <input type="id" placeholder="¾ÆÀÌµð¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.. ">
+                        <input type="text" name = "id" placeholder="ì•„ì´ë””ë¥¼ ìž…ë ¥í•´ì£¼ì„¸ìš”.. " required="required">
                     </div>
                     <div class="login_container">
                         <i class="fas fa-unlock-alt"></i>
-                        <input type="password" placeholder="ºñ¹Ð¹øÈ£¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä.. ">
+                        <input type="password" name ="password" placeholder="ë¹„ë°€ë²ˆí˜¸ë¥¼ ìž…ë ¥í•´ì£¼ì„¸ìš”.. " required="required">
                     </div>
-                    <!-- ·Î±×ÀÎ ¹öÆ° -->
-                    <input type="submit" value="·Î±×ÀÎ">
-                    <!-- ·Î±×ÀÎ ¼­ºê ¸Þ´º -->
+                    <!-- ë¡œê·¸ì¸ ë²„íŠ¼ -->
+                    <input type="submit" value="ë¡œê·¸ì¸">
+                    <!-- ë¡œê·¸ì¸ ì„œë¸Œ ë©”ë‰´ -->
                     <div class="login_sub">
-                        <a href="#">¾ÆÀÌµð Ã£±â</a>
-                        <a href="#">ºñ¹Ð¹øÈ£ Ã£±â</a>
-                        <a href="Join.jsp" target="_blank">È¸¿ø°¡ÀÔ</a>
+                        <a href="#">ì•„ì´ë”” ì°¾ê¸°</a>
+                        <a href="#">ë¹„ë°€ë²ˆí˜¸ ì°¾ê¸°</a>
+                        <a href="Join.jsp" target="_blank">íšŒì›ê°€ìž…</a>
                     </div>
                 </div>  
             </form>  
-            <!-- ÇªÅÍ(³¡) ¿µ¿ª -->
+            <!-- í‘¸í„°(ë) ì˜ì—­ -->
             <div id="footer">
-                PCC(ÁÖ) | °æ±âµµ ºÎÃµ½Ã ¼Ò»ç·Î 78¹ø±æ 70<br>
-              	»ç¾÷ÀÚµî·Ï¹øÈ£ : 000-00-00000 | °³ÀÎÁ¤º¸°ü¸®Ã¥ÀÓÀÚ : ¼­°­Çõ<br>
-               	 ÀüÈ­¹øÈ£ : 032-345-5886 | ÀÌ¸ÞÀÏ : kanghyeok93@naver.com
-               <p>PCC´Â °Ô½Ã¹°ÀÇ ¹«´Ü µµ¿ë,º¹Á¦ & 2Â÷ °¡°ø ¹× »ó¾÷Àû ÀÌ¿ëÀ» ±ÝÁöÇÕ´Ï´Ù.</p>
-               <p>copyright¨Ï2018 PCC. All rights reserved. </p>
+                PCC(ì£¼) | ê²½ê¸°ë„ ë¶€ì²œì‹œ ì†Œì‚¬ë¡œ 78ë²ˆê¸¸ 70<br>
+              	ì‚¬ì—…ìžë“±ë¡ë²ˆí˜¸ : 000-00-00000 | ê°œì¸ì •ë³´ê´€ë¦¬ì±…ìž„ìž : ì„œê°•í˜<br>
+               	 ì „í™”ë²ˆí˜¸ : 032-345-5886 | ì´ë©”ì¼ : kanghyeok93@naver.com
+               <p>PCCëŠ” ê²Œì‹œë¬¼ì˜ ë¬´ë‹¨ ë„ìš©,ë³µì œ & 2ì°¨ ê°€ê³µ ë° ìƒì—…ì  ì´ìš©ì„ ê¸ˆì§€í•©ë‹ˆë‹¤.</p>
+               <p>copyrightâ“’2018 PCC. All rights reserved. </p>
             </div>
         </div>
     </body>

@@ -24,5 +24,17 @@ public class JoinDAO {
 	public void insert(SqlSession sqlSession, JoinVO vo) {
 		sqlSession.insert("join.insert", vo);
 	}
+	
+	//============================================================
+	// 2. 로그인 login
+	public JoinVO login(SqlSession sqlSession, String id) {
+		return sqlSession.selectOne("join.login", id);
+	}
+	
+	//============================================================
+	// 3. 아이디 중복 체크 
+	public int idChecked(SqlSession sqlSession, String id) {
+		return sqlSession.selectOne("join.idChecked", id);
+	}
 
 }

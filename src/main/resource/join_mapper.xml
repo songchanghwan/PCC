@@ -9,11 +9,27 @@
 	<select id="insert" parameterType="JoinVO">
 		<![CDATA[
 	 		insert into pcc_join 
-	 			(id, nicname, password, email, regdate, ip)
+	 			(id, nicname, password, email)
 	 		values
-	 			(#{id}, #{nicname}, #{password}, #{email}, now(), #{ip})
+	 			(#{id}, #{nicname}, #{password}, #{email})
 	 	]]>
 	</select>
+	
+	<!-- 로그인    -->
+	<select id="login" parameterType="String" resultType="JoinVO">
+		<![CDATA[
+			select * from pcc_join where id =#{id}
+	 	]]>
+	</select>
+	
+	<!-- 아이디 중복 확인    -->
+	<select id="idChecked" parameterType="String" resultType="int">
+		<![CDATA[
+			select count(*) from pcc_join where id =#{id}
+	 	]]>
+	</select>
+	
+	
 	
 	
 </mapper>

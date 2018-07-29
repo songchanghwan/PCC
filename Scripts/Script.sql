@@ -35,4 +35,6 @@ select * from board ORDER BY idx DESC LIMIT 5 OFFSET 5
    		regdate TIMESTAMP DEFAULT now(),
    		ip VARCHAR(20)
    	)
+   	
+   	DELETE FROM pcc_join WHERE idx=4;
 
