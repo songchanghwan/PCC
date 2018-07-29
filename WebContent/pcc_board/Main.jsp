@@ -23,11 +23,11 @@
                    			 .main_text_header { letter-spacing:3px; text-align:center; border-bottom:2px solid white; padding:40px 0; }
                    			 .main_text_middle { width:80%; margin:0 auto; padding:50px 0;  font-family: 'Poor Story', cursive; font-weight:700; 
                    			 letter-spacing:1px; }
-                   			 .main_text_middle p:nth-child(2) { font-size:2rem; padding:50px 0;}
-                   			 #card_wrap { text-align:center; overflow:hidden;  }
+                   			 .main_text_middle p:nth-child(2) { font-size:2rem; padding:50px 0; }
+                   			 #card_wrap { text-align:center; overflow:hidden; }
                    			 #card_wrap .card:nth-child(2) { border-left:2px solid white; border-right:2px solid white; box-sizing:border-box; }
                    			 .card { float:left; width:33.33%; }                  			 
-                   			 .card i{ font-size:3rem; margin-bottom:15px;  }
+                   			 .card i{ font-size:3rem; margin-bottom:15px; }
                    			 .main_text_bottom { font-size:1.3rem; font-family:'Poor Story', cursive; font-weight:700; width:80%; margin:0 auto; margin-top:30px;   }
                    			 .main_text_bottom p { padding:10px 0;}
                    		</style>
