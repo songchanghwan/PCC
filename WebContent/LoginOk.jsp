@@ -30,12 +30,14 @@
 //		System.out.println("DB_password :" +joinvo.getPassword()); // VO의 비밀번호
 
 		if(joinvo != null && NOW_password.equals(joinvo.getPassword())) {
-			out.println("<script>");
-			out.println("alert('로그인 성공');");
+//			out.println("<script>");
+//			out.println("alert('로그인 성공');");
+//			out.println("</script>");
 			session.setAttribute("id", id);
 			session.setAttribute("nicname", joinvo.getNicname());
-			out.println("location.href = 'pcc_board/Main.jsp';");
-			out.println("</script>");
+			response.sendRedirect("pcc_board/Main.jsp");
+// 			out.println("location.href = 'pcc_board/Main.jsp';");
+	
 			
 		}
 	

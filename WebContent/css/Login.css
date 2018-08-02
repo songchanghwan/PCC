@@ -8,9 +8,9 @@ a{ text-decoration:none; color:inherit; }
 #wrap{ width:100%; }
 body { font-family: 'Source Sans Pro',sans-serif; }
 /* 헤더 영역 */
-#header{ width:100%; height:230px; border-bottom:1px solid #b7b7b7; }
+#header{ width:100%; height:230px; border-bottom:1px solid #b7b7b7; background-image:url("../M_images/header_bg.png"); background-position:0 310px; }
 /* 헤더 상단 메뉴얼 */
-.h_menu{ width:100%; height:50px; position:relative; border-bottom:1px solid #b7b7b7; min-width:500px; }
+.h_menu{ width:100%; height:50px; position:relative; border-bottom:1px solid #b7b7b7; min-width:500px; background-color:white; }
 .h_menu_sub { width:300px; position:absolute; right:40px; }
 .h_menu_sub li { float:left; }
 .h_menu_sub li a { font-size:0.9rem; font-weight:700; margin-left:10px; color:#989797; line-height:50px; }
@@ -30,7 +30,7 @@ body { font-family: 'Source Sans Pro',sans-serif; }
     100%{ transform:translateY(0px); }
 } 
 /* 로그인 영역 */
-#login { width:400px; height:300px; border:3px solid palevioletred; margin:0 auto; margin-top:50px; box-sizing: border-box; padding-top:30px; position:relative; border-radius:15px;}
+#login {background-size:cover; background-image:url("../L_images/L_bg.png"); width:400px; height:300px; border:3px solid palevioletred; margin:0 auto; margin-top:50px; box-sizing: border-box; padding-top:30px; position:relative; border-radius:15px;}
 #login i { font-size:2.3rem; }
 #login .login_container { display:flex; justify-content:center; align-items:center; margin-top:10px; }
 #login .login_container input { margin-left:10px; padding:10px; }
