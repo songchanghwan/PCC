@@ -23,10 +23,10 @@ a{ text-decoration:none; color:inherit; }
 #rbar { width:45px; height:100%; border-left:1px solid #c8c8c8; position:fixed; font-size:2rem; top:0; right:0; text-align:center; writing-mode:tb-rl; background-color:#ffffff; letter-spacing:3px; z-index:100; }
 .rbar_txt { line-height:45px; width:40px; height:300px; animation:rbar_ani linear 5s infinite; font-weight:700; margin:auto; }
 @keyframes rbar_ani{
-    25%{ transform:translateY(-150px); }
-    50%{ transform:translateY(0px); color:transparent; }
-    75%{ transform:translateY(150px); }
-    100%{ transform:translateY(0px); }
+    25%{ transform:translateY(-150px);}
+    50%{ transform:translateY(0px); color:transparent;}
+    75%{ transform:translateY(150px);}
+    100%{ transform:translateY(0px);}
 } 
 /* AD ±¤°í */
 #aside { width:150px; position:absolute; right:35px; text-align:center; font-size:2rem;}

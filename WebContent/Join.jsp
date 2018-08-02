@@ -93,10 +93,9 @@
 		<form action="joinOk.jsp" method="post"
 			onsubmit="return formCheck(this);">
 			<div id="Join">
-
-						
 				<p>
-					<span>아이디</span><input type="text" name="id" id="text_id" value ="${cookie['id'].value }"><input type="button" class="Join_ch" value="아이디확인" onclick="idChecked()">
+					<span>아이디</span><input type="text" name="id" id="text_id" value ="${cookie['id'].value }">
+					<input type="button" class="Join_ch" value="아이디확인" onclick="idChecked()">
 				</p>
 				<p>
 					<span>닉네임</span><input type="text" name="nicname"><input
