@@ -55,15 +55,13 @@
                 <!-- 메인 메뉴얼 -->
                 <div id="nav">
                     <div class="user">
-                    	<ul>
-                    	    <li>${empty sessionScope.id ? "로그인 해주세요" : id_session_comment}</li>
-                            <li>${empty sessionScope.nicname ? "" : sessionScope.nicname}</li>
-                            <li><a href="../Logout.jsp" target="_blank">
+                    	    ${empty sessionScope.id ? "로그인 해주세요" : id_session_comment}
+                            ${empty sessionScope.nicname ? "" : sessionScope.nicname}
+                            <a href="../Logout.jsp">
                             	<c:if test="${not empty sessionScope.id}">
                             		로그아웃
                             	</c:if>
-                            </a></li>
-                         </ul>
+                            </a>
                     </div>
                     <!-- 메인 메뉴 작업 -1 -->
                     <a href="Notice.jsp"><i class="fas fa-bullhorn"></i> 공지사항</a>

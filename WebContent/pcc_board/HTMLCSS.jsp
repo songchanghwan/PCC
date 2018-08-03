@@ -9,7 +9,8 @@
 	pageEncoding="UTF-8"%>
 <%@ include file="../include.jsp"%>
 <%
-	pagingVo<BoardVO> paging = BoardService.getInstance().selectList(currentPage, pageSize, blockSize);
+	int board_idx = 1;
+	pagingVo<BoardVO> paging = BoardService.getInstance().selectList(currentPage, pageSize, blockSize, board_idx);
 	request.setAttribute("paging", paging);
 %>
 <!DOCTYPE html>
@@ -25,12 +26,12 @@
 			<!--  게시판  Start  -->
 			<table>
 				<tr>
-					<td colspan="4" align="center"
+					<td colspan="5" align="center"
 						style="font-size: 18pt; padding: 20px; border: none;">자유게시판
 						-목록보기</td>
 				</tr>
 				<tr>
-					<td colspan="4" align="right" style="border: none;">
+					<td colspan="5" align="right" style="border: none;">
 						${paging.pageInfo }</td>
 				</tr>
 				<tr>
@@ -41,14 +42,14 @@
 				</tr>
 				<c:if test="${paging.totalCount==0 }">
 					<tr>
-						<td colspan="4" align="center">등록된 글이 없습니다.</td>
+						<td colspan="5" align="center">등록된 글이 없습니다.</td>
 					</tr>
 				</c:if>
 
 				<c:if test="${paging.totalCount>0 }">
 					<c:forEach var="vo" items="${paging.list }">
 						<tr align="center">
-							<td>${vo.idx }</td>
+							<td>${vo.board_idx_incre }</td>
 							<td>${vo.content }</td>
 							<td>${vo.user }</td>
 							<td>${vo.regdate }</td>
@@ -58,6 +59,9 @@
 				<tr>
 				<td colspan="4" align="center" style="border: none;">
 					${paging.pageList }
+				</td>
+				<td>
+					<button onclick="location.href='write.jsp'">글쓰기</button>
 				</td>
 			</tr>
 			</table>

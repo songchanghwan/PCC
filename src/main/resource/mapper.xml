@@ -6,9 +6,9 @@
 <mapper namespace="Board">
 
 	<!-- 01. 전체 갯수 얻기        -->
-	<select id="getCount" resultType="int" >
+	<select id="getCount" resultType="int" parameterType="int" >
 		<![CDATA[
-	 		select count(*) from board
+	 		select count(*) from board where board_idx=#{board_idx}
 	 	]]>
 	</select>
 	
@@ -23,7 +23,7 @@
 	<!-- 3. 1페이지 얻기 -->
 	<select resultType="BoardVO" id="selectList" parameterType="hashMap">
 		<![CDATA[
-				select * from board ORDER BY idx DESC LIMIT #{startNo},#{endNo}
+				select * from board where board_idx=#{board_idx} ORDER BY board_idx DESC LIMIT #{startNo},#{endNo} 
 			]]>
 	</select>
 	
