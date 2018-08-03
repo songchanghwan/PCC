@@ -20,8 +20,8 @@ public class BoardDAO {
 	
 	//============================================================
 	// 1. 전체 개수 얻기
-	public int getCount(SqlSession sqlSession) {
-		return sqlSession.selectOne("Board.getCount");
+	public int getCount(SqlSession sqlSession, int board_idx) {
+		return sqlSession.selectOne("Board.getCount", board_idx);
 	}
 	
 	// 2. 1개 얻기
@@ -30,10 +30,11 @@ public class BoardDAO {
 	}
 	
 	// 3. 1페이지 얻기
-	public List<BoardVO> selectList(SqlSession sqlSession, int startNo,int endNo) {
+	public List<BoardVO> selectList(SqlSession sqlSession, int startNo,int endNo, int board_idx) {
 		HashMap<String, Integer> map = new HashMap<>();
 		map.put("startNo", startNo);
 		map.put("endNo", endNo);
+		map.put("board_idx", board_idx);
 		return sqlSession.selectList("Board.selectList", map);
 	}
 }

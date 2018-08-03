@@ -10,6 +10,8 @@ public class BoardVO {
 	private Date regdate;
 	private int count;
 	private int hit;
+	private int board_idx;
+	private int board_idx_incre;
 	
 	public int getIdx() {
 		return idx;
@@ -53,13 +55,27 @@ public class BoardVO {
 	public void setHit(int hit) {
 		this.hit = hit;
 	}
-	
+	public int getBoard_idx() {
+		return board_idx;
+	}
+	public void setBoard_idx(int board_idx) {
+		this.board_idx = board_idx;
+	}
+	public int getBoard_idx_incre() {
+		return board_idx_incre;
+	}
+	public void setBoard_idx_incre(int board_idx_incre) {
+		this.board_idx_incre = board_idx_incre;
+	}
 	@Override
 	public String toString() {
 		return "BoardVO [idx=" + idx + ", ref=" + ref + ", content=" + content + ", user=" + user + ", regdate="
-				+ regdate + ", count=" + count + ", hit=" + hit + "]";
+				+ regdate + ", count=" + count + ", hit=" + hit + ", board_idx=" + board_idx + ", board_idx_incre="
+				+ board_idx_incre + "]";
 	}
 	
+	
+
 	
 	
 }
