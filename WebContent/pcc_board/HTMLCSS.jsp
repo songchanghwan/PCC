@@ -17,6 +17,12 @@
 <html>
 <head>
 <jsp:include page="HeadTag.jsp" />
+<script>
+	function writeFun() {
+		alert("로그인을 해주세요!");
+		location.href="../Login.jsp";
+	}
+</script>
 </head>
 
 <body>
@@ -61,7 +67,12 @@
 					${paging.pageList }
 				</td>
 				<td>
-					<button onclick="location.href='write.jsp'">글쓰기</button>
+					<c:if test="${not empty sessionScope.id}">
+						<button onclick="location.href='write.jsp'">글쓰기</button>
+					</c:if>
+					<c:if test="${empty sessionScope.id}">
+						<button onclick="writeFun()">글쓰기</button>
+					</c:if>
 				</td>
 			</tr>
 			</table>
