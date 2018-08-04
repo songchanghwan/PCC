@@ -20,12 +20,31 @@
 		]]>
 	</select>
 
-	<!-- 3. 1페이지 얻기 -->
+	<!-- 03. 1페이지 얻기 -->
 	<select resultType="BoardVO" id="selectList" parameterType="hashMap">
 		<![CDATA[
 				select * from board where board_idx=#{board_idx} ORDER BY board_idx DESC LIMIT #{startNo},#{endNo} 
 			]]>
 	</select>
+	
+	 <!-- 04. 저장하기    -->
+	 <insert id="insert" parameterType="BoardVO">
+	 	<![CDATA[
+	 		insert into board
+	 			(subject, content, user, regdate, board_idx, board_idx_incre) 
+	 		values
+	 			(#{subject}, #{content}, #{user}, now(), #{board_idx}, #{board_idx_incre})
+	 	]]>
+	 </insert>
+	 
+		<!-- 05. 이전 데이터 가져오기    -->
+	 <select id="PreBoardIdx" resultType="int" parameterType="String">
+	 	<![CDATA[
+			SELECT board_idx_incre FROM board where board_idx=#{board_idx} ORDER BY board_idx_incre DESC LIMIT 1 
+	 	]]>
+	 </select>
+	 
+	 
 	
 	
 	

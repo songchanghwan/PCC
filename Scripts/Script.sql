@@ -9,7 +9,7 @@
    	)
    	
    	INSERT INTO board(ref, content, user, regdate, count, hit)
-   	VALUES (2, '¿­¼¼¹øÂ° °Ô½ÃÆÇ', 'song', now(), 0, 0)
+   	VALUES (2, 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â° ï¿½Ô½ï¿½ï¿½ï¿½', 'song', now(), 0, 0)
 
    	
 show variables like 'c%';
@@ -37,4 +37,13 @@ select * from board ORDER BY idx DESC LIMIT 5 OFFSET 5
    	)
    	
    	DELETE FROM pcc_join WHERE idx=4;
-
+   
+   
+   
+   	 		insert into board
+	 			(subject, content, user, regdate, board_idx, board_idx_incre) 
+	 		values
+	 			('ì•ˆë…•', 'ã…Žã…‡ã…Žã…‡', 'song' , now(), 1, (SELECT board_idx_incre FROM board ORDER BY board_idx_incre DESC LIMIT 1))
+	 			
+	 			
+SELECT board_idx_incre FROM board where board_idx=1 ORDER BY board_idx_incre DESC LIMIT 1 
