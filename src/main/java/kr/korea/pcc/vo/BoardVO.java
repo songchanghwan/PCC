@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class BoardVO {
 	private int idx;
-	private int ref;
+	private String subject;
 	private String content;
 	private String user;
 	private Date regdate;
@@ -12,18 +12,17 @@ public class BoardVO {
 	private int hit;
 	private int board_idx;
 	private int board_idx_incre;
-	
 	public int getIdx() {
 		return idx;
 	}
 	public void setIdx(int idx) {
 		this.idx = idx;
 	}
-	public int getRef() {
-		return ref;
+	public String getSubject() {
+		return subject;
 	}
-	public void setRef(int ref) {
-		this.ref = ref;
+	public void setSubject(String subject) {
+		this.subject = subject;
 	}
 	public String getContent() {
 		return content;
@@ -69,10 +68,11 @@ public class BoardVO {
 	}
 	@Override
 	public String toString() {
-		return "BoardVO [idx=" + idx + ", ref=" + ref + ", content=" + content + ", user=" + user + ", regdate="
+		return "BoardVO [idx=" + idx + ", subject=" + subject + ", content=" + content + ", user=" + user + ", regdate="
 				+ regdate + ", count=" + count + ", hit=" + hit + ", board_idx=" + board_idx + ", board_idx_incre="
 				+ board_idx_incre + "]";
 	}
+
 	
 	
 

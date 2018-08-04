@@ -37,4 +37,14 @@ public class BoardDAO {
 		map.put("board_idx", board_idx);
 		return sqlSession.selectList("Board.selectList", map);
 	}
+	
+	// 4. 저장하기
+	public void insert(SqlSession sqlSession, BoardVO vo) {
+		sqlSession.insert("Board.insert", vo);
+	}
+	
+	// 5. 이전 데이터 얻기
+	public int PreBoardIdx(SqlSession sqlSession, String board_idx) {
+		return sqlSession.selectOne("Board.PreBoardIdx", board_idx);
+	}
 }

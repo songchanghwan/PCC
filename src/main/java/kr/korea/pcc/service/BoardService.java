@@ -54,4 +54,46 @@ public class BoardService {
 		return paging;
 	}
 	
+	// 2. 저장 하기 - insert
+	public void insert(BoardVO vo, int PreBoard_idx){
+		logger.debug("BoardService insert 호출됨");
+		SqlSession sqlSession = null;
+		try {
+			sqlSession = MybatisUtil.getSqlSessionFactory().openSession();
+			logger.debug("BoardService insert 세션 : " + sqlSession.toString());
+			//===========================================================
+			vo.setBoard_idx_incre(PreBoard_idx+1);
+			BoardDAO.getInstance().insert(sqlSession, vo);
+			//===========================================================
+			sqlSession.commit();
+		}catch(Exception e) {
+			sqlSession.rollback();
+			e.printStackTrace();
+		}finally {
+			if(sqlSession!=null) sqlSession.close();
+		}
+		logger.debug("BoardService insert 호출종료 : ");
+	}
+	
+	// 3. 이전 데이터 - insert
+		public int PreBoardIdx(String board_idx){
+			SqlSession sqlSession = null;
+			int Pre_board_idx =0;
+			try {
+				sqlSession = MybatisUtil.getSqlSessionFactory().openSession();
+				//===========================================================
+				Pre_board_idx = BoardDAO.getInstance().PreBoardIdx(sqlSession, board_idx);
+				//===========================================================
+				sqlSession.commit();
+			}catch(Exception e) {
+				sqlSession.rollback();
+				e.printStackTrace();
+			}finally {
+				if(sqlSession!=null) sqlSession.close();
+			}
+			logger.debug("BoardService insert 호출종료 : ");
+			
+			return Pre_board_idx;
+		}
+	
 }
