@@ -99,7 +99,7 @@
 				</p>
 				<p>
 					<span>닉네임</span><input type="text" name="nicname"><input
-						type="button" class="Join_ch" value="닉네임확인">
+						type="button" class="Join_ch" value="닉네임확인" style="margin-left:14px;">
 				</p>
 				<p>
 					<span>비밀번호</span><input type="password" name="password">

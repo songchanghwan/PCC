@@ -32,7 +32,7 @@ body { font-family: 'Source Sans Pro',sans-serif; }
 /* 회원가입 영역 */
 #Join { background-position:50px 0; background-size:cover; background-image:url("../L_images/L_bg.png"); width:500px; border:3px solid palevioletred; margin:0 auto; margin-top:50px; box-sizing:border-box; font-family:'Poor Story', cursive; font-weight:700; font-size:1.3rem; padding:30px; border-radius:15px;}
 #Join p > *{ font-family:'Poor Story', cursive; font-weight:700; font-size:1.3rem; width:150px; margin:10px 0 10px 0; }
-#Join span { display:inline-block; width:120px; text-align:center;}
+#Join span { display:inline-block; width:120px; text-align:center; }
 #Join .Join_ch { width:130px; margin-left:10px; }
 #Join .Join_btn { width:50%; margin:0 auto; margin-top:15px; overflow:hidden; }
 #Join .Join_btn input { font-family:'Poor Story', cursive; font-weight:700; font-size:1.3rem; border:none; background-color:transparent; cursor:pointer; float:left; width:70px; outline:none; border:2px solid peru; border-radius:50%; height:55px; }
