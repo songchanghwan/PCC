@@ -1,6 +1,7 @@
 <%@page import="kr.korea.pcc.vo.BoardVO"%>
 <%@page import="kr.korea.pcc.service.BoardService"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro|Abril+Fatface|Poor+Story" rel="stylesheet">
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="function" uri="http://java.sun.com/jsp/jstl/functions"%>
@@ -31,15 +32,15 @@
 	<div id="section">
 		<div class="article">
 			<form action="../writeOk.jsp" method="post">
-				<table>
+				<table style="border-collapse:separate; border-spacing:0 20px;">
 					<tr>
 						<td
-							style="text-align: center; background-color: silver; color: gray; font-size: 15pt"
-							colspan="2">글읽기
+							style="text-align: center; font-size: 17pt; padding:10px; border-radius:30px; box-shadow:0px 0px 15px coral; font-family:'Poor Story', cursive; font-weight:700; letter-spacing:5px;" 
+							colspan="2" >글읽기
 						</td>
 					</tr>
 					<tr>
-						<td>제목</td>
+						<td style="">제목</td>
 						<td><input type="text" name="subject" width="100" value="${vo.subject}" readonly="readonly"/></td>
 					</tr>
 					<tr>
