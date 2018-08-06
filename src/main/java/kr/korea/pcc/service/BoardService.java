@@ -95,5 +95,25 @@ public class BoardService {
 			
 			return Pre_board_idx;
 		}
+		
+		// 4. 한개 데이터 얻기
+		public BoardVO selectByIdx(int board_idx, int board_idx_incre){
+			logger.debug("BoardService selectByIdx 호출됨");
+			BoardVO boardVO = null;
+			SqlSession sqlSession = null;
+			try {
+				sqlSession = MybatisUtil.getSqlSessionFactory().openSession();
+				//===========================================================
+				boardVO = BoardDAO.getInstance().selectByIdx(sqlSession, board_idx, board_idx_incre);
+				//===========================================================
+				sqlSession.commit();
+			}catch(Exception e) {
+				sqlSession.rollback();
+				e.printStackTrace();
+			}finally {
+				if(sqlSession!=null) sqlSession.close();
+			}
+			return boardVO;
+		}
 	
 }

@@ -11,6 +11,7 @@
 	String content = request.getParameter("content");
  	String board_idx = request.getParameter("board_idx"); 	
  %>
+ 
  	<jsp:useBean id="insertVo" class="kr.korea.pcc.vo.BoardVO"/>
  	<jsp:setProperty property="*" name="insertVo"/>
  	<jsp:setProperty property="user" name ="insertVo" value="${sessionScope.id}"/>

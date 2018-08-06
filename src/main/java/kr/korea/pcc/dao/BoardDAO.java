@@ -2,6 +2,7 @@ package kr.korea.pcc.dao;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 
@@ -25,8 +26,11 @@ public class BoardDAO {
 	}
 	
 	// 2. 1개 얻기
-	public BoardVO selectByIdx(SqlSession sqlSession, int idx) {
-		return sqlSession.selectOne("Board.selectByIdx", idx);
+	public BoardVO selectByIdx(SqlSession sqlSession, int board_idx, int board_idx_incre) {
+		Map<String, Integer> map = new HashMap<String,Integer>();
+		map.put("board_idx", board_idx);
+		map.put("board_idx_incre", board_idx_incre);
+		return sqlSession.selectOne("Board.selectByIdx", map);
 	}
 	
 	// 3. 1페이지 얻기

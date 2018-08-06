@@ -14,9 +14,9 @@
 	
 	<!-- 02. 1개 얻기 -->
 
-	<select resultType="BoardVO" id="selectByIdx" parameterType="int">
+	<select resultType="BoardVO" id="selectByIdx" parameterType="hashMap">
 		<![CDATA[
-			select * from board	where idx=#{idx}	
+			select * from board where board_idx=#{board_idx} and board_idx_incre=#{board_idx_incre}
 		]]>
 	</select>
 
