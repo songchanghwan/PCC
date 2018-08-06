@@ -47,3 +47,7 @@ select * from board ORDER BY idx DESC LIMIT 5 OFFSET 5
 	 			
 	 			
 SELECT board_idx_incre FROM board where board_idx=1 ORDER BY board_idx_incre DESC LIMIT 1 
+
+
+
+	select * from board where board_idx=1 AND board_idx_incre=1

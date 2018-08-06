@@ -55,12 +55,16 @@
                 <!-- 메인 메뉴얼 -->
                 <div id="nav">
                     <div class="user">
+                         <p>
                     	    ${empty sessionScope.id ? "로그인 해주세요" : id_session_comment}
+                    	 </p>
                             ${empty sessionScope.nicname ? "" : sessionScope.nicname}
                             <a href="../Logout.jsp">
+                            <p>
                             	<c:if test="${not empty sessionScope.id}">
                             		로그아웃
                             	</c:if>
+                            </p>
                             </a>
                     </div>
                     <!-- 메인 메뉴 작업 -1 -->
