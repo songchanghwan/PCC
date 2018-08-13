@@ -90,8 +90,7 @@
 			<div class="rbar_txt">Welcome To PCC</div>
 		</div>
 		<!-- 회원가입 화면 -->
-		<form action="joinOk.jsp" method="post"
-			onsubmit="return formCheck(this);">
+		<form action="joinOk.jsp" method="post" onsubmit="return formCheck(this);">
 			<div id="Join">
 				<p>
 					<span>아이디</span><input type="text" name="id" id="text_id" value ="${cookie['id'].value }">

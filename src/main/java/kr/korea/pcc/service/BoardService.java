@@ -97,7 +97,7 @@ public class BoardService {
 		}
 		
 		// 4. 한개 데이터 얻기
-		public BoardVO selectByIdx(int board_idx, int board_idx_incre){
+		public BoardVO selectByIdx(String board_idx, String board_idx_incre){
 			logger.debug("BoardService selectByIdx 호출됨");
 			BoardVO boardVO = null;
 			SqlSession sqlSession = null;
@@ -114,6 +114,88 @@ public class BoardService {
 				if(sqlSession!=null) sqlSession.close();
 			}
 			return boardVO;
+		}
+		
+		// 5. 수정 하기 - update
+		public void update(BoardVO vo){
+			logger.debug("BoardService update 호출됨");
+			SqlSession sqlSession = null;
+			try {
+				sqlSession = MybatisUtil.getSqlSessionFactory().openSession();
+				logger.debug("BoardService update 세션 : " + sqlSession.toString());
+				//===========================================================
+				BoardDAO.getInstance().update(sqlSession, vo);
+				//===========================================================
+				sqlSession.commit();
+			}catch(Exception e) {
+				sqlSession.rollback();
+				e.printStackTrace();
+			}finally {
+				if(sqlSession!=null) sqlSession.close();
+			}
+			logger.debug("BoardService update 호출종료 : ");
+		}
+		
+		// 6. 삭제 하기 - delete
+		public void delete(BoardVO vo){
+			logger.debug("BoardService delete 호출됨");
+			SqlSession sqlSession = null;
+			try {
+				sqlSession = MybatisUtil.getSqlSessionFactory().openSession();
+				logger.debug("BoardService delete 세션 : " + sqlSession.toString());
+				//===========================================================
+				BoardDAO.getInstance().delete(sqlSession, vo);
+				//===========================================================
+				sqlSession.commit();
+			}catch(Exception e) {
+				sqlSession.rollback();
+				e.printStackTrace();
+			}finally {
+				if(sqlSession!=null) sqlSession.close();
+			}
+			logger.debug("BoardService delete 호출종료 : ");
+		}
+		
+		// 7. 삭제 후 인덱싱 처리deleteIndex
+		public void deleteIndex(String board_idx, String board_idx_incre){
+			logger.debug("BoardService deleteIndex 호출됨");
+			SqlSession sqlSession = null;
+			try {
+				sqlSession = MybatisUtil.getSqlSessionFactory().openSession();
+				logger.debug("BoardService deleteIndex 세션 : " + sqlSession.toString());
+				//===========================================================
+				BoardDAO.getInstance().deleteIndex(sqlSession, board_idx, board_idx_incre);
+				//===========================================================
+				sqlSession.commit();
+			}catch(Exception e) {
+				sqlSession.rollback();
+				e.printStackTrace();
+			}finally {
+				if(sqlSession!=null) sqlSession.close();
+			}
+			logger.debug("BoardService deleteIndex 호출종료 : ");
+		}
+		
+		// 8. 아이디 값 가져오기
+		public String selectByUser(String board_idx, String board_idx_incre){
+			logger.debug("BoardService selectByUser 호출됨");
+			SqlSession sqlSession = null;
+			String DBUser = "";
+			try {
+				sqlSession = MybatisUtil.getSqlSessionFactory().openSession();
+				logger.debug("BoardService selectByUser 세션 : " + sqlSession.toString());
+				//===========================================================
+				DBUser = BoardDAO.getInstance().selectByUser(sqlSession, board_idx, board_idx_incre);
+				//===========================================================
+				sqlSession.commit();
+			}catch(Exception e) {
+				sqlSession.rollback();
+				e.printStackTrace();
+			}finally {
+				if(sqlSession!=null) sqlSession.close();
+			}
+			logger.debug("BoardService selectByUser 호출종료 : ");
+			return DBUser;
 		}
 	
 }

@@ -26,8 +26,8 @@ public class BoardDAO {
 	}
 	
 	// 2. 1개 얻기
-	public BoardVO selectByIdx(SqlSession sqlSession, int board_idx, int board_idx_incre) {
-		Map<String, Integer> map = new HashMap<String,Integer>();
+	public BoardVO selectByIdx(SqlSession sqlSession, String board_idx, String board_idx_incre) {
+		Map<String, String> map = new HashMap<String,String>();
 		map.put("board_idx", board_idx);
 		map.put("board_idx_incre", board_idx_incre);
 		return sqlSession.selectOne("Board.selectByIdx", map);
@@ -51,4 +51,33 @@ public class BoardDAO {
 	public int PreBoardIdx(SqlSession sqlSession, String board_idx) {
 		return sqlSession.selectOne("Board.PreBoardIdx", board_idx);
 	}
+	
+	// 6. 수정하기
+	public void update(SqlSession sqlSession, BoardVO vo) {
+		sqlSession.update("Board.update", vo);
+	}
+	
+	// 7. 삭제하기
+	public void delete(SqlSession sqlSession, BoardVO vo) {
+		sqlSession.update("Board.delete", vo);
+	}
+	
+	// 8. 삭제 후 인덱싱 처리
+	public void deleteIndex(SqlSession sqlSession, String board_idx, String board_idx_incre) {
+		HashMap<String, String> map = new HashMap<>();
+		map.put("board_idx", board_idx);
+		map.put("board_idx_incre", board_idx_incre);
+		sqlSession.update("Board.deleteIndex", map);
+	}
+	
+	// 9. 아이디 값 가져오기
+	public String selectByUser(SqlSession sqlSession, String board_idx, String board_idx_incre) {
+		HashMap<String, String> map = new HashMap<>();
+		map.put("board_idx", board_idx);
+		map.put("board_idx_incre", board_idx_incre);
+		return sqlSession.selectOne("Board.selectByUser", map);
+	}
+	
+	
+	
 }
