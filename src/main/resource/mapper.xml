@@ -23,7 +23,7 @@
 	<!-- 03. 1페이지 얻기 -->
 	<select resultType="BoardVO" id="selectList" parameterType="hashMap">
 		<![CDATA[
-				select * from board where board_idx=#{board_idx} ORDER BY board_idx DESC LIMIT #{startNo},#{endNo} 
+				select * from board where board_idx=#{board_idx} and visible=1 ORDER BY board_idx DESC LIMIT #{startNo},#{endNo} 
 			]]>
 	</select>
 	
@@ -44,6 +44,28 @@
 	 	]]>
 	 </select>
 	 
+	 <!-- 06. 수정하기    -->
+	 <update id="update" parameterType="BoardVO">
+	 	<![CDATA[
+	 		update board set subject=#{subject}, content=#{content}, regdate=now() where board_idx=#{board_idx} AND board_idx_incre=#{board_idx_incre} 
+	 	]]>
+	 </update>
+	 
+	 	 
+	 <!-- 07. 삭제하기    -->
+	 <delete id="delete" parameterType="BoardVO">
+	 	<![CDATA[
+	 		update board set regdate=now(), visible=0 where board_idx=#{board_idx} AND board_idx_incre=#{board_idx_incre} 
+	 	]]>
+	 </delete>
+
+	
+	 <!-- 08. 삭제 index 이상의 데이터의 idx를 -1로 변경    -->
+	 <update id="deleteIndex" parameterType="hashMap">
+	 	<![CDATA[
+	 		UPDATE board SET board_idx_incre = board_idx_incre-1 where board_idx = #{board_idx} AND board_idx_incre > #{board_idx_incre} 
+	 	]]>
+	 </update>
 	 
 	
 	

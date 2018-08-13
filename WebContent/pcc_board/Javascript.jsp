@@ -34,22 +34,21 @@
 	<div id="section">
 		<div class="article">
 			<!--  게시판  Start  -->
-			<table>
+			<table border="1" style="display:inline-block;">
 				<tr>
 					<td colspan="5" align="center"
-						style="font-size: 18pt; padding: 20px; border: none;">자유게시판
-						-목록보기</td>
+						style="font-size: 18pt; padding: 20px; border: none;">JavaScript 게시판</td>
 				</tr>
 				<tr>
-					<td colspan="5" align="right" style="border: none;">
+					<td colspan="5" align="right" style="border: none; padding: 0px 15px 30px 0;">
 						${paging.pageInfo }</td>
 				</tr>
 				<tr>
-					<th>No</th>
-					<th>제목</th>
-					<th width="50%">내용</th>
-					<th>작성자</th>
-					<th>작성일</th>
+					<th width="10%">No</th>
+					<th width="20%">제목</th>
+					<th width="30%">내용</th>
+					<th width="15%">작성자</th>
+					<th width="25%">작성일</th>
 				</tr>
 				<c:if test="${paging.totalCount==0 }">
 					<tr>
@@ -69,18 +68,18 @@
 					</c:forEach>
 				</c:if>
 				<tr>
-				<td colspan="5" align="center" style="border: none;">
+				<td colspan="4" align="center" style="border: none; padding:20px;">
 					${paging.pageList }
 				</td>
-				<td>
+				<td colspan="1" style="border:none; text-align:center;">
 					<c:url var="url" value="write.jsp">	
 						<c:param name="board_idx" value="${board_idx}"></c:param>
 					</c:url>
 					<c:if test="${not empty sessionScope.id}">
-					<button onclick="location.href='${url}'">글쓰기</button>
+					<button style="padding:7px;" onclick="location.href='${url}'">글쓰기</button>
 					</c:if>
 					<c:if test="${empty sessionScope.id}">
-						<button onclick="writeFun()">글쓰기</button>
+						<button style="padding:7px;" onclick="writeFun()">글쓰기</button>
 					</c:if>
 				</td>
 			</tr>

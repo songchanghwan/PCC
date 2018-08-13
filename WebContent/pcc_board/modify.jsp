@@ -10,14 +10,7 @@
 		response.setHeader("Cache-Control","no-cache");
 		response.setHeader("Pragma","no-cache");
 		response.setDateHeader("Expires",0);
-		
-		String board_idx = request.getParameter("board_idx");
-		String board_idx_incre = request.getParameter("board_idx_incre");
-		
-		BoardVO vo = BoardService.getInstance().selectByIdx(Integer.parseInt(board_idx),Integer.parseInt(board_idx_incre));
-		session.setAttribute("vo", vo);
-		session.setAttribute("board_idx", board_idx);
-		session.setAttribute("board_idx_incre", board_idx_incre);
+
 %>
 <!doctype html>
 <html lang="ko">
@@ -30,34 +23,57 @@
 			border: 1px solid black;
 		}
 	</style>
+	
+	<script>
+		function formCheck(obj) {
+			if (!obj.subject.value) {
+				alert("제목을 입력해 주세요!!");
+				obj.subject.focus();
+				return false;
+			}
+			if (!obj.content.value) {
+				alert("내용을 입력해 주세요!!");
+				obj.content.focus();
+				return false;
+			}
+			
+			return true;
+		}
+	</script>
 
 </head>
+
+<%
+	
+
+%>
 <body>
 	<!-- 섹션(중간) 영역 -->
 	<div id="section">
 		<div class="article">
+			<form action="../modifyOk.jsp?board_idx=${board_idx}&board_idx_incre=${board_idx_incre}" method="POST" onsubmit="return formCheck(this);">
 				<table style="border-collapse:separate; border-spacing:0 20px;">
 					<tr>
 						<td
 							style="text-align: center; font-size: 17pt; padding:10px; border-radius:30px; box-shadow:0px 0px 15px coral; font-family:'Poor Story', cursive; font-weight:700; letter-spacing:5px;" 
-							colspan="2" >글읽기
+							colspan="2" >글 수정
 						</td>
 					</tr>
 					<tr>
 						<td style="">제목</td>
-						<td><input type="text" name="subject" width="100" value="${vo.subject}" readonly="readonly"/></td>
+						<td><input type="text" name="subject" width="100" value="${vo.subject}"/></td>
 					</tr>
 					<tr>
 						<td>내용</td>
-						<td><textarea name="content" cols="100" rows="25" readonly="readonly">${vo.content}</textarea></td>
+						<td><textarea name="content" cols="100" rows="25">${vo.content}</textarea></td>
 					</tr>
 					<tr>
 						<td style="text-align: right;" colspan="2">
-							<button onclick="location.href='modify.jsp'">수정하기</button>
-							<button onclick="location.href='deleteOK.jsp'">삭제하기</button>
+							<input type="submit" value="수정하기" />
 						</td>
 					</tr>
 				</table>
+			</form>
 		</div>
 	</div>
 	<jsp:include page="FooterTag.jsp" />

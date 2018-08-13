@@ -115,5 +115,65 @@ public class BoardService {
 			}
 			return boardVO;
 		}
+		
+		// 5. 수정 하기 - update
+		public void update(BoardVO vo){
+			logger.debug("BoardService update 호출됨");
+			SqlSession sqlSession = null;
+			try {
+				sqlSession = MybatisUtil.getSqlSessionFactory().openSession();
+				logger.debug("BoardService update 세션 : " + sqlSession.toString());
+				//===========================================================
+				BoardDAO.getInstance().update(sqlSession, vo);
+				//===========================================================
+				sqlSession.commit();
+			}catch(Exception e) {
+				sqlSession.rollback();
+				e.printStackTrace();
+			}finally {
+				if(sqlSession!=null) sqlSession.close();
+			}
+			logger.debug("BoardService update 호출종료 : ");
+		}
+		
+		// 6. 삭제 하기 - delete
+		public void delete(BoardVO vo){
+			logger.debug("BoardService delete 호출됨");
+			SqlSession sqlSession = null;
+			try {
+				sqlSession = MybatisUtil.getSqlSessionFactory().openSession();
+				logger.debug("BoardService delete 세션 : " + sqlSession.toString());
+				//===========================================================
+				BoardDAO.getInstance().delete(sqlSession, vo);
+				//===========================================================
+				sqlSession.commit();
+			}catch(Exception e) {
+				sqlSession.rollback();
+				e.printStackTrace();
+			}finally {
+				if(sqlSession!=null) sqlSession.close();
+			}
+			logger.debug("BoardService delete 호출종료 : ");
+		}
+		
+		// 7. 삭제 후 인덱싱 처리deleteIndex
+		public void deleteIndex(String board_idx, String board_idx_incre){
+			logger.debug("BoardService deleteIndex 호출됨");
+			SqlSession sqlSession = null;
+			try {
+				sqlSession = MybatisUtil.getSqlSessionFactory().openSession();
+				logger.debug("BoardService deleteIndex 세션 : " + sqlSession.toString());
+				//===========================================================
+				BoardDAO.getInstance().deleteIndex(sqlSession, board_idx, board_idx_incre);
+				//===========================================================
+				sqlSession.commit();
+			}catch(Exception e) {
+				sqlSession.rollback();
+				e.printStackTrace();
+			}finally {
+				if(sqlSession!=null) sqlSession.close();
+			}
+			logger.debug("BoardService deleteIndex 호출종료 : ");
+		}
 	
 }

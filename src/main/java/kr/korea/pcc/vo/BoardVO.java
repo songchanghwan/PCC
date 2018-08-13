@@ -12,6 +12,15 @@ public class BoardVO {
 	private int hit;
 	private int board_idx;
 	private int board_idx_incre;
+	private int visible;
+	
+	
+	public int getVisible() {
+		return visible;
+	}
+	public void setVisible(int visible) {
+		this.visible = visible;
+	}
 	public int getIdx() {
 		return idx;
 	}
@@ -70,9 +79,10 @@ public class BoardVO {
 	public String toString() {
 		return "BoardVO [idx=" + idx + ", subject=" + subject + ", content=" + content + ", user=" + user + ", regdate="
 				+ regdate + ", count=" + count + ", hit=" + hit + ", board_idx=" + board_idx + ", board_idx_incre="
-				+ board_idx_incre + "]";
+				+ board_idx_incre + ", visible=" + visible + "]";
 	}
 
+	
 	
 	
 
