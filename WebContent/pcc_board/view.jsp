@@ -14,7 +14,7 @@
 		String board_idx = request.getParameter("board_idx");
 		String board_idx_incre = request.getParameter("board_idx_incre");
 		
-		BoardVO vo = BoardService.getInstance().selectByIdx(Integer.parseInt(board_idx),Integer.parseInt(board_idx_incre));
+		BoardVO vo = BoardService.getInstance().selectByIdx(board_idx,board_idx_incre);
 		session.setAttribute("vo", vo);
 		session.setAttribute("board_idx", board_idx);
 		session.setAttribute("board_idx_incre", board_idx_incre);
@@ -53,8 +53,8 @@
 					</tr>
 					<tr>
 						<td style="text-align: right;" colspan="2">
-							<button onclick="location.href='modify.jsp'">수정하기</button>
-							<button onclick="location.href='deleteOK.jsp'">삭제하기</button>
+							<button onclick="location.href='../viewModi.jsp'">수정하기</button>
+							<button onclick="location.href='../viewDelete.jsp'">삭제하기</button>
 						</td>
 					</tr>
 				</table>

@@ -49,7 +49,6 @@ select * from board ORDER BY idx DESC LIMIT 5 OFFSET 5
 SELECT board_idx_incre FROM board where board_idx=1 ORDER BY board_idx_incre DESC LIMIT 1 
 
 
-
 	select * from board where board_idx=1 AND board_idx_incre=1
 	
 	update board set subject='안녕하세요', content='처음 가입인사 드립니다.' where board_idx=1 AND board_idx_incre=1
@@ -62,6 +61,8 @@ SELECT board_idx_incre FROM board where board_idx=1 ORDER BY board_idx_incre DES
 	UPDATE board SET board_idx_incre = board_idx_incre-1 where board_idx = 1 AND board_idx_incre > 5
 	
 	UPDATE board SET board_idx_incre = board_idx_incre-1 where board_idx = '1' AND board_idx_incre > '12'
+	
+	select * from board where board_idx=1 and visible=1 ORDER BY board_idx DESC LIMIT 1,15
 		 		
 		 		
 		 		

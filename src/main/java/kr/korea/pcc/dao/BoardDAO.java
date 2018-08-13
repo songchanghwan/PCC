@@ -26,8 +26,8 @@ public class BoardDAO {
 	}
 	
 	// 2. 1개 얻기
-	public BoardVO selectByIdx(SqlSession sqlSession, int board_idx, int board_idx_incre) {
-		Map<String, Integer> map = new HashMap<String,Integer>();
+	public BoardVO selectByIdx(SqlSession sqlSession, String board_idx, String board_idx_incre) {
+		Map<String, String> map = new HashMap<String,String>();
 		map.put("board_idx", board_idx);
 		map.put("board_idx_incre", board_idx_incre);
 		return sqlSession.selectOne("Board.selectByIdx", map);
@@ -68,6 +68,14 @@ public class BoardDAO {
 		map.put("board_idx", board_idx);
 		map.put("board_idx_incre", board_idx_incre);
 		sqlSession.update("Board.deleteIndex", map);
+	}
+	
+	// 9. 아이디 값 가져오기
+	public String selectByUser(SqlSession sqlSession, String board_idx, String board_idx_incre) {
+		HashMap<String, String> map = new HashMap<>();
+		map.put("board_idx", board_idx);
+		map.put("board_idx_incre", board_idx_incre);
+		return sqlSession.selectOne("Board.selectByUser", map);
 	}
 	
 	

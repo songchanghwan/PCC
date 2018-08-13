@@ -97,7 +97,7 @@ public class BoardService {
 		}
 		
 		// 4. 한개 데이터 얻기
-		public BoardVO selectByIdx(int board_idx, int board_idx_incre){
+		public BoardVO selectByIdx(String board_idx, String board_idx_incre){
 			logger.debug("BoardService selectByIdx 호출됨");
 			BoardVO boardVO = null;
 			SqlSession sqlSession = null;
@@ -174,6 +174,28 @@ public class BoardService {
 				if(sqlSession!=null) sqlSession.close();
 			}
 			logger.debug("BoardService deleteIndex 호출종료 : ");
+		}
+		
+		// 8. 아이디 값 가져오기
+		public String selectByUser(String board_idx, String board_idx_incre){
+			logger.debug("BoardService selectByUser 호출됨");
+			SqlSession sqlSession = null;
+			String DBUser = "";
+			try {
+				sqlSession = MybatisUtil.getSqlSessionFactory().openSession();
+				logger.debug("BoardService selectByUser 세션 : " + sqlSession.toString());
+				//===========================================================
+				DBUser = BoardDAO.getInstance().selectByUser(sqlSession, board_idx, board_idx_incre);
+				//===========================================================
+				sqlSession.commit();
+			}catch(Exception e) {
+				sqlSession.rollback();
+				e.printStackTrace();
+			}finally {
+				if(sqlSession!=null) sqlSession.close();
+			}
+			logger.debug("BoardService selectByUser 호출종료 : ");
+			return DBUser;
 		}
 	
 }
