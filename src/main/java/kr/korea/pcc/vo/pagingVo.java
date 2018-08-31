@@ -3,7 +3,7 @@ package kr.korea.pcc.vo;
 import java.util.List;
 
 public class pagingVo<T> {
-	// 넘겨받을 데이터
+		// 넘겨받을 데이터
 		private int totalCount; // 전체개수
 		private int currentPage; // 현재페이지
 		private int pageSize; // 페이지당 글수

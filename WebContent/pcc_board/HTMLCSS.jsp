@@ -17,8 +17,8 @@
 	int board_idx = 1;
 	pageContext.setAttribute("board_idx", board_idx);
 	session.setAttribute("board_name", board_name);
-	pagingVo<BoardVO> paging = BoardService.getInstance().selectList(currentPage, pageSize, blockSize,
-			board_idx);
+	
+	pagingVo<BoardVO> paging = BoardService.getInstance().selectList(currentPage, pageSize, blockSize, board_idx);
 	request.setAttribute("paging", paging);
 %>
 <!DOCTYPE html>
