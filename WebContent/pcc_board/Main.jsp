@@ -42,7 +42,7 @@
 	                   				 <div class="card">
 	                   				 	<i class="fas fa-user-tie"></i>
 	                   				 	<h3>Seo Kang Hyeok</h3>
-	                   				 	<h4>Front-End</h4>
+	                   				 	<h4>Web-Publisher</h4>
 	                   				 </div>
 	                   				 <div class="card">
 	                   				 	<i class="fas fa-user-tie"></i>
