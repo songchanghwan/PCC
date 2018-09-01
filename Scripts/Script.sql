@@ -18,7 +18,7 @@ SHOW CREATE TABLE board;
 
 ALTER TABLE board CONVERT TO character SET utf8;
 
-select * from board ORDER BY idx DESC LIMIT 0,5
+select * from board ORDER BY board_idx =1 AND visible=1 DESC LIMIT 1,6
 
 select * from board ORDER BY idx DESC LIMIT 5,5 
 
