@@ -8,12 +8,17 @@
 	pageEncoding="UTF-8"%>
 <%@ include file="../include.jsp"%>
 <%
+	response.setHeader("Cache-Control","no-cache");
+	response.setHeader("Pragma","no-cache");
+	response.setDateHeader("Expires",0);
+
 	// 만약 HTMLCS면 board_idx = 1 JAVASCRIPT면 board_idx = 2
 //	String path = application.getRealPath("/");
 	String board_name = request.getRequestURL().substring(request.getRequestURL().lastIndexOf("/") +1);
 	int board_idx = 2;
 	pageContext.setAttribute("board_idx", board_idx);
 	session.setAttribute("board_name", board_name);
+	
 	pagingVo<BoardVO> paging = BoardService.getInstance().selectList(currentPage, pageSize, blockSize, board_idx);
 	request.setAttribute("paging", paging);
 %>
@@ -27,6 +32,13 @@
 		location.href="../Login.jsp";
 	}
 </script>
+
+<style>
+		.content_view:hover {
+			color: red;
+		}
+
+</style>
 </head>
 
 <body>
@@ -61,7 +73,14 @@
 						<tr align="center">
 							<td>${vo.board_idx_incre }</td>
 							<td>${vo.subject }</td>
-							<td>${vo.content }</td>
+							<td class="content_view"><c:url var="url" value="view.jsp">
+									<c:param name="board_idx" value="${board_idx}"/>
+									<c:param name="board_idx_incre" value="${vo.board_idx_incre}"/>
+								</c:url> <c:if test="${not empty sessionScope.id}">
+									<a href="${url}">${vo.content }</a>
+								</c:if> <c:if test="${empty sessionScope.id}">
+									<a href="#" onclick="writeFun()">${vo.content }</a>
+								</c:if> </td>
 							<td>${vo.user }</td>
 							<td>${vo.regdate }</td>
 						</tr>

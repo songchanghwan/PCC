@@ -23,7 +23,7 @@
 	<!-- 03. 1페이지 얻기 -->
 	<select resultType="BoardVO" id="selectList" parameterType="hashMap">
 		<![CDATA[
-				select * from board where board_idx=#{board_idx} and visible=1 ORDER BY board_idx DESC LIMIT #{startNo},#{endNo} 
+				select * from board where board_idx=#{board_idx} and visible=1 ORDER BY board_idx_incre DESC LIMIT #{startNo},#{endNo} 
 			]]>
 	</select>
 	
